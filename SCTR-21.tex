@@ -43,11 +43,12 @@ an LSST milestone pertaining to the System Engineering Subsystem.
 \subsection{Objectives}
 \label{sect:objectives}
 
- The objective of this test plan is to re-verify the hardware functional
-requirements of the M2 hexapod, as well as verify the software
-functional requirements of the M2 hexapod integrated with SAL 4.0. This
-test campaign will exercise the functionality of the hardware that was
-executed previously and meets the following criteria:
+ The objective of this test plan is to re-verify the hardware and
+software functional requirements of the M2 hexapod without SAL, as well
+as verify the software functional requirements of the M2 hexapod
+integrated with SAL 4.0. This test campaign will exercise the
+functionality of the hardware and software that was executed previously
+and meets the following criteria:
 
 \begin{itemize}
 \tightlist
@@ -58,15 +59,22 @@ executed previously and meets the following criteria:
   Only requires a laser tracker
 \end{itemize}
 
-The hardware requirements were previously verified during the test
-campaign by the vendor at the vendors facility and accepted by LSST
-during the Factory Acceptance Test review.
+The hardware and software requirements were previously verified during
+the test campaign by the vendor at the vendors facility and accepted by
+LSST during the Factory Acceptance Test review.
 
 
 
 \subsection{System Overview}
 \label{sect:systemoverview}
 
+ The purpose of the M2 hexapod is to maintain proper orientation of the
+M2 Cell Assembly. It is attached to the spider spindle of the Top End
+Assembly of the TMA. Although the mass of the M2 mirror cell assembly is
+greater than the camera, the actuators of the M2 hexapod are identical
+to the Camera Hexapod's actuators. For this reason, the Camera Hexapod
+and M2 hexapod have the same operator's manual and similar test
+procedures.~
 
 
 \subsection{Document Overview}
@@ -101,11 +109,12 @@ The current status of test plan LVV-P68 in Jira is \textbf{ Draft }.
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
-  The M2 Hexapod will be verified in a climate controlled environment on
+   The M2 Hexapod will be verified in a climate controlled environment on
 the 3rd floor of the Summit Facility on the shipping/test plate.~
 
+
   \subsection{Entry Criteria}
-  In order to test the M2 Hexapod functionality, the following criteria
+   In order to test the M2 Hexapod functionality, the following criteria
 must be met first:
 
 \begin{itemize}
@@ -122,15 +131,16 @@ must be met first:
   The EFD must be set up to be able to store events and telemetry data
 \end{itemize}
 
+
   \subsection{Exit Criteria}
-  In order for this event to be considered complete, the following
+   In order for this event to be considered complete, the following
 criteria must be met:
 
 \begin{itemize}
 \tightlist
 \item
   Raw test data, events, and telemetry have been saved for the M2
-  Hexapod.
+  Hexapod in the EFD.
 \item
   All test data has been analyzed and post processed.
 \item
@@ -150,8 +160,10 @@ criteria must be met:
   project
 \end{itemize}
 
+
   \subsection{PMCS Activity}
-  See Epics in Traceability Tab
+   See Epics/Tasks in Traceability Tab
+
 
 \newpage
 \section{Personnel}
@@ -169,12 +181,13 @@ The personnel involved in the test campaign is shown in the following table.
 }
 } \\\hline
 \textbf{Test Case} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small (1) Software Engineer\\
-(1) Hardware Engineer }
+{\small  (1) Software Engineer\\
+(1) Hardware Engineer
+ }
 \medskip
 \end{minipage}
 \\ \hline
@@ -182,8 +195,19 @@ The personnel involved in the test campaign is shown in the following table.
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small (1) Software Engineer\\
-(1) Hardware Engineer }
+{\small  (1) Software Engineer\\
+(1) Hardware Engineer
+ }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
+& {\small Kevin Siruno } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  (1) Software Engineer\\
+(1) Hardware Engineer
+ }
 \medskip
 \end{minipage}
 \\ \hline
@@ -199,13 +223,15 @@ The personnel involved in the test campaign is shown in the following table.
 
 \begin{longtable}{p{2cm}p{2.5cm}p{9cm}p{2.5cm}}
 \toprule
-\multicolumn{3}{l}{ Test Plan {\bf LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL 4.0 }} & Draft \\\hline
+\multicolumn{3}{l}{ Test Plan {\bf LVV-P68:  M2 Hexapod Functional Re-verification and Integration with SAL 4.0
+ }} & Draft \\\hline
 
-  \multicolumn{3}{l}{ Test Cycle {\bf LVV-C147: M2 Hexapod Re-verification and Integration Testing }} & Not Executed \\\hline
+  \multicolumn{3}{l}{ Test Cycle {\bf LVV-C147:  M2 Hexapod Re-verification and Integration Testing
+ }} & Not Executed \\\hline
 
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
-    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
     & Not Executed &
     \begin{minipage}[]{9cm}
     \smallskip
@@ -215,6 +241,15 @@ The personnel involved in the test campaign is shown in the following table.
     &
     \\\hline
     \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{LVV-T1800}
+    & Not Executed &
+    \begin{minipage}[]{9cm}
+    \smallskip
+    
+    \medskip
+    \end{minipage}
+    &
+    \\\hline
+    \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
     & Not Executed &
     \begin{minipage}[]{9cm}
     \smallskip
@@ -243,16 +278,20 @@ Not yet available.
 
 \subsection{Test Cycle LVV-C147 }
 
-Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification and Integration Testing}} in Jira.
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{ M2 Hexapod Re-verification and Integration Testing
+}} in Jira.
 
-M2 Hexapod Re-verification and Integration Testing\\
+ M2 Hexapod Re-verification and Integration Testing
+\\
 Status: Not Executed
 
-Re-verify the hardware for the M2 Hexapod that was previously tested by
-MOOG and verify the integrated M2 hexapod with SAL 4.0~
+ Re-verify the hardware and software for the M2 Hexapod that was
+previously tested by MOOG and verify the integrated M2 hexapod with SAL
+4.0.
+
 
 \subsubsection{Software Version/Baseline}
-\begin{enumerate}
+ \begin{enumerate}
 \tightlist
 \item
   M2 Hexapod Control Software with SAL v4.0
@@ -260,17 +299,1632 @@ MOOG and verify the integrated M2 hexapod with SAL 4.0~
   EFD with SAL v4.0
 \end{enumerate}
 
+
 \subsubsection{Configuration}
-No varying configuration between test cycles.
+ No varying configuration between test cycles.
+
 
 \subsubsection{Test Cases in LVV-C147 Test Cycle}
 
-\paragraph{Test Case LVV-T1802 - Integration of M2 Hexapod with SAL 4.0 (LSST) }\mbox{}\\
+\paragraph{Test Case LVV-T1804 -  M2 Hexapod Software Functional Re-verification
+ }\mbox{}\\
+
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{\textit{ LVV-T1804 } }
+test case in Jira.
+
+ The objective of this test case is to re-verify the functional
+requirements of the M2 hexapod's software, after shipment of the
+hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
+and \citeds{LTS-160}. This test case will only exercise the functionality that
+was executed previously and meets the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Only requires the M2 hexapod to be operable
+\item
+  Only requires testing of the synchronous mode
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Asynchronous mode is not a standard mode of operation}
+  \end{itemize}
+\item
+  Only requires the vendors EUI software and hardware via local control
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Does \textbf{NOT} require integration with SAL
+  \end{itemize}
+\item
+  Does \textbf{NOT} require the M2 hexapod to be loaded with the camera
+  simulated mass or actual camera hardware
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles.
+\end{itemize}
+
+The software functional requirements were previously verified during the
+test campaign by the vendor at the vendor's facility and accepted by
+LSST during the Factory Acceptance Test review. The test procedure used
+during the vendor's acceptance testing is the \emph{LSST
+Hexapods-Rotator Software Acceptance Test Procedure} which is attached
+to this test case. The test steps of this test case are taken directly
+from that document on how to perform the test in a similar way as was
+performed previously and includes changes noted by the
+vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
+Manual} for more information on how to operate the hexapod.
+
+
+\textbf{ Preconditions}:\\
+ Prior to the execution of this test case to re-verify the M2 Hexapod
+hardware functional requirements, the following Summit tasks must be
+completed:
+
+\begin{itemize}
+\tightlist
+\item
+  The measurement equipment has been set-up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
+\end{itemize}
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
+Viewer desktop icon on the computer.
+
+\begin{itemize}
+\tightlist
+\item
+  This can be done on the Dell Management PC or another computer on the
+  same network
+\end{itemize}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A prompt to enter the password is shown.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Enter the password ``lsst-vnc''
+
+\begin{itemize}
+\tightlist
+\item
+  If the EUI isn't automatically up and running when the VNC opens,
+  double click on the Hexapod-eGUI icon on the VNC viewer
+\end{itemize}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The EUI is in the Offline State/PublishOnly substate and is able to
+publish through SAL but cannot receive commands.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{OFFLINESTATE/AVAILABLESTATE}\\
+On the Main tab, select the ``Offline SubState Cmd'' field in the
+Commands to Send section, set the Offline SubState Triggers to ``System
+Ready'' and click on the Send Command button.\\
+\includegraphics[width=1.79167in]{jira_imgs/1024.png}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from the OfflineState/PublishOnly substate to the
+OfflineState/AvailableState substate and the Command Source says
+eGUI.\\[2\baselineskip]
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
+Click on the State Command field in the Commands to Send section.\\
+\includegraphics[width=1.79167in]{jira_imgs/1028.png}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The State Triggers dialogue box shown below becomes visible.\\
+\includegraphics[width=1.79167in]{jira_imgs/1029.png}
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Scroll through the available trigger options to select ``Enter Control''
+and click the Send Command button.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions to the Standby state and the primary state
+display box at the top of the Main says Standby State.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
+From the StandbyState, send a Start State command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions into DisabledState and the current configuration
+parameters are maintained from the default parameters or from the
+previous DDS start command.~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
+From the DisabledState, send an Enable State Command.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions into the EnabledState/Stationary substate, the
+motor drives are enabled and and motion can be commanded.~
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textless{}conditional state\textgreater{}\\
+\textbf{FAULTSTATE}\\
+If a Fault occurs in any of the other states, the system will
+automatically transition to the Fault State. While in the Fault state,
+send a clearError.\\
+Note: If the fault that occurs goes through the interlock system, reset
+the safety relay switch and send a clearError command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions back to the OfflineState/PublishOnly substate.
+(Go back to Step 3)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#1 - Synchronous PositionSet and Move
+Commands}\\[2\baselineskip]With the synchronous button enabled and in
+enabled/stationary state, send a positionSet command of (0um, 0um,
+200um, 0 deg, 0 deg, 0 deg) using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary state,
+send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
+.002deg) using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+11 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves to the last commanded position of (2000um, -3500um,
+200um, .01 deg, -.05deg, .002deg) and the actuators complete the move at
+nearly the same time as seen on the motion complete lights on the
+telemetry screen.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+12 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#2 - Pivot, PositionSet and Move
+Commands}\\[2\baselineskip]In enabled/stationary state and at the last
+commanded position of (2000um, -3500um, 200um, .01 deg, -.05deg,
+.002deg), change the pivot point from the default location to (0,0,0)
+using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The actuator positions do not change, but the hexapod position is
+(-407um, -3982um, 199um, 0.01deg, -0.05deg, 0.002deg)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+13 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+In the enabled/stationary state, send a positionSet command of (2000um,
+-3500um, 200um, .01 deg, -.05deg, .002deg) using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+14 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command using the EUI.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves to the commanded position of (2000um, -3500um, 200um,
+.01 deg, -.05deg, .002deg) and the actuators change position to account
+for the new pivot point.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+15 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#4 - Synchronous Offset and Move
+Commands}\\[2\baselineskip]With the synchronous button enabled and in
+enabled/stationary state, send a positionSet command of (500um, 800um,
+200um, 0 deg, 0 deg, 0 deg).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+16 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary state,
+send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+17 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves only 2000um in Z from the previous position and the
+actuators complete the move at nearly the same time as seen on the
+motion complete lights on the telemetry screen.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+18 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Instead of Asynchronous Test}\\
+{With the synchronous button enabled and in enabled/stationary
+state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
+0.1deg, 0deg, 0deg)
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+19 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+0deg, 0deg)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+20 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary
+state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
+0.1deg, 0deg)
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+21 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0deg,
+0.1deg, 0deg)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+22 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary
+state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
+0.1deg, 0deg)
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+23 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+0.1deg, 0deg)
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+24 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#5 - Stop Commands}\\[2\baselineskip]In
+enabled/stationary state, send a position set command of (0um, 0um,
+5000um, 0 deg, 0 deg, 0 deg).
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod doesn't move.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+25 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a move command.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod starts to move to the commanded position.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+26 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+While the hexapod is moving, send a stop command.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod quickly comes to a stop prior to reaching the commanded
+position.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+27 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 3.3.1 EUI Tests of the attached Software Acceptance Test
+Procedure}\\
+At startup, confirm that the system starts in the Offline/PublishOnly
+state.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The rotator starts in the Offline/PublishOnly state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+28 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send an offline substate trigger of systemReady.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions into the Offline/Available substate.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+29 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send an EnterControl trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Offline/Available to Standby state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+30 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a Start trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Standby to Disabled state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+31 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send an Enable trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Disabled to Enabled state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+32 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a Disable trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Enabled to Disabled state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+33 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a Standby trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Disabled state to Standby state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+34 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Send a exitControl trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Standby state to Offline state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+35 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Return to the Enabled state and trip the safety interlock switch.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions to Fault state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+36 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Reset the safety interlock and send a ClearError trigger.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from Fault state to Offline state
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+37 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Section 4.1 Hexapod Events of the attached Software Acceptance
+Test Procedure}\\[2\baselineskip]In the Enabled/Stationary state, unplug
+a motor encoder cable for one of the actuators.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation:~}Perform the following set of steps using the EUI
+instead of the DDS and verify the events are displayed on the EUI.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+38 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+In the Enabled/Stationary state, unplug a linear encoder cable for one
+of the actuators.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+39 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Unplug a motor power cable from one of the actuators and command a
+PositionSet/Move.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A Following Error event is created and the system transitions to Fault
+state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+40 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Activate an extension limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An Extended Limit Switch error event is created and the system
+transitions into Fault state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+41 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Activate a retraction limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+A Retracted Limit Switch error event is created and the system
+transitions into Fault state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+42 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+Unplug the Ethercat cable between the control PC and the first Copley
+XE2 drive.
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+An Ethercat Lost event is created and the system transitions to Fault
+state.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{Test Case LVV-T1800 -  M2 Hexapod Hardware Functional Re-verification
+ }\mbox{}\\
+
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{\textit{ LVV-T1800 } }
+test case in Jira.
+
+ The objective of this test case is to re-verify the functional
+requirements of the M2 hexapod's hardware, after shipment from the
+vendor's facility to the Summit, as defined in \citeds{LTS-206}. This test case
+will only exercise the functionality that was executed previously and
+meets the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Only requires the M2 hexapod to be operable
+\item
+  Only requires the EUI software and hardware via local control
+\item
+  Only requires a laser tracker
+\item
+  Does \textbf{NOT} require the M2 hexapod to be loaded with an M2
+  simulated mass or actual M2
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles.
+\end{itemize}
+
+
+\textbf{ Preconditions}:\\
+ Prior to the execution of this test case to re-verify the M2 Hexapod
+hardware functional requirements, the following Summit tasks must be
+completed:
+
+\begin{itemize}
+\tightlist
+\item
+  The measurement equipment has been set-up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
+\item
+  The laser tracker has been set up for measurements
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-3951}
+  \end{itemize}
+\end{itemize}
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{longtable}{p{1cm}p{15cm}}
+\hline
+{Step} & Step Details\\ \hline
+1 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.12 Positioning~
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Deviation: Test at a single elevation angle and with no performance
+payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+2 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.13 Centers of Rotation
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+3 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.15 Radial (X and Y) Translation Range
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Single elevation angle
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+4 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.17 Axial (Z) Translation Range
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Single elevation angle
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+5 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.19 Rotational Range Around X-Axis (Tip) and Y-Axis (
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Single elevation angle
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+6 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.21
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+7 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.23
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Allow a minimum of 30 seconds between moves
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+8 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.24
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+9 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.26 and 3.5.27
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+10 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.28
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Perform at single elevation angle
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+11 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+3.5.14 Cross Talk Motion
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+Analyze data from 3.5.15, 3.5.17, and 3.5.19 test steps after testing to
+verify cross talk
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+\end{longtable}
+
+\paragraph{Test Case LVV-T1802 -  Integration of M2 Hexapod with SAL 4.0 (LSST)
+ }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{\textit{ LVV-T1802 } }
 test case in Jira.
 
-The objective of this test case is to re-verify the functional
+ The objective of this test case is to re-verify the functional
 requirements of the M2 hexapod's software, after shipment of the
 hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
 and \citeds{LTS-160}. This test case will only exercise the functionality that
@@ -297,6 +1951,9 @@ was executed previously and meets the following criteria:
 \item
   Does \textbf{NOT} require the M2 hexapod to be loaded with the M2
   simulated mass or actual M2
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles.
 \end{itemize}
 
 The software functional requirements were previously verified during the
@@ -304,22 +1961,31 @@ test campaign by the vendor at the vendor's facility and accepted by
 LSST during the Factory Acceptance Test review. The test procedure used
 during the vendor's acceptance testing is the \emph{LSST
 Hexapods-Rotator Software Acceptance Test Procedure} which is attached
-to this test case. The test steps of this test case are derived from the
-same procedure, but the order of the steps have been changed to reflect
-the \emph{Proposal of Hexapod Test~on Dec. 2019~}Confluence page which
-can be found linked in the Traceability tab.\\[2\baselineskip]See the
-attached \emph{LSST Hexapod Operator's Manual} for more information on
-how to operate the hexapod.
+to this test case. The test steps of this test case are the same steps
+from the procedure for the testing of the Camera Hexapod. The order of
+the steps were changed to reflect the \emph{Proposal of Hexapod Test~on
+Dec. 2019~}Confluence page which can be found linked in the Traceability
+tab.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
+Manual} for more information on how to operate the hexapod.
+
 
 \textbf{ Preconditions}:\\
-Prior to the execution of this test case to re-verify the M2 Hexapod
+ Prior to the execution of this test case to re-verify the M2 Hexapod
 hardware functional requirements, the following Summit tasks must be
 completed:
 
 \begin{itemize}
 \tightlist
 \item
+  The measurement equipment has been set-up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
 \end{itemize}
+
 
 Execution status: {\bf Not Executed }
 
@@ -2254,374 +3920,6 @@ XE2 drive.
  & \begin{minipage}[t]{15cm}{\footnotesize
 An Ethercat Lost event is created and the system transitions to Fault
 state.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-\end{longtable}
-
-\paragraph{Test Case LVV-T1800 - M2 Hexapod Hardware Functional Re-verification }\mbox{}\\
-
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{\textit{ LVV-T1800 } }
-test case in Jira.
-
-The objective of this test case is tor e-verify the functional
-requirements of the M2 hexapod's hardware, after shipment from the
-vendor's facility to the Summit, as defined in \citeds{LTS-206}. This test case
-will only exercise the functionality that was executed previously and
-meets the following criteria:
-
-\begin{itemize}
-\tightlist
-\item
-  Only requires the M2 hexapod to be operable
-\item
-  Only requires the EUI software and hardware via local control
-\item
-  Only requires a laser tracker
-\item
-  Does NOT require the M2 hexapod to be loaded with an M2 simulated mass
-\end{itemize}
-
-\textbf{ Preconditions}:\\
-Prior to the execution of this test case to re-verify the M2 Hexapod
-hardware functional requirements, the following Summit tasks must be
-completed:
-
-\begin{itemize}
-\tightlist
-\item
-  The measurement equipment has been set-up for testing
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
-  \end{itemize}
-\item
-  The laser tracker has been set up for measurements
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \url{https://jira.lsstcorp.org/browse/SUMMIT-3951}
-  \end{itemize}
-\end{itemize}
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{longtable}{p{1cm}p{15cm}}
-\hline
-{Step} & Step Details\\ \hline
-1 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.12 Positioning~
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Deviation: Test at a single elevation angle and with no performance
-payload.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-2 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.13 Centers of Rotation
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-3 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.15 Radial (X and Y) Translation Range
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-4 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.17 Axial (Z) Translation Range
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-5 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.19 Rotational Range Around X-Axis (Tip) and Y-Axis (
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-6 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.21
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-7 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.23
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Allow a minimum of 30 seconds between moves
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-8 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.24
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-9 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.26 and 3.5.27
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-10 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.28
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Perform at single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Actual Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Status: \textbf{ Not Executed } \\ \hline
-
-11 & Description \\
- & \begin{minipage}[t]{15cm}
-{\footnotesize
-3.5.14 Cross Talk Motion
-
-\medskip }
-\end{minipage}
-\\ \cdashline{2-2}
-
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Analyze data from 3.5.15, 3.5.17, and 3.5.19 test steps after testing to
-verify cross talk
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
-
- & Expected Result \\
- & \begin{minipage}[t]{15cm}{\footnotesize
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
