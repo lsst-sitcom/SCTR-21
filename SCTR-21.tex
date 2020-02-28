@@ -1611,22 +1611,24 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.12 Positioning~
+\textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
+Viewer desktop icon on the computer.
+
+\begin{itemize}
+\tightlist
+\item
+  This can be done on the Dell Management PC or another computer on the
+  same network
+\end{itemize}
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Deviation: Test at a single elevation angle and with no performance
-payload.
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+A prompt to enter the password is shown.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1642,7 +1644,14 @@ payload.
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.13 Centers of Rotation
+Enter the password ``lsst-vnc''
+
+\begin{itemize}
+\tightlist
+\item
+  If the EUI isn't automatically up and running when the VNC opens,
+  double click on the Hexapod-eGUI icon on the VNC viewer
+\end{itemize}
 
 \medskip }
 \end{minipage}
@@ -1651,6 +1660,8 @@ payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The EUI is in the Offline State/PublishOnly substate and is able to
+publish through SAL but cannot receive commands.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1666,21 +1677,22 @@ payload.
 3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.15 Radial (X and Y) Translation Range
+\textbf{OFFLINESTATE/AVAILABLESTATE}\\
+On the Main tab, select the ``Offline SubState Cmd'' field in the
+Commands to Send section, set the Offline SubState Triggers to ``System
+Ready'' and click on the Send Command button.\\
+\includegraphics[width=1.79167in]{jira_imgs/1024.png}
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions from the OfflineState/PublishOnly substate to the
+OfflineState/AvailableState substate and the Command Source says
+eGUI.\\[2\baselineskip]
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1696,21 +1708,19 @@ Single elevation angle
 4 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.17 Axial (Z) Translation Range
+\textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
+Click on the State Command field in the Commands to Send section.\\
+\includegraphics[width=1.79167in]{jira_imgs/1028.png}
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The State Triggers dialogue box shown below becomes visible.\\
+\includegraphics[width=1.79167in]{jira_imgs/1029.png}
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1726,21 +1736,18 @@ Single elevation angle
 5 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.19 Rotational Range Around X-Axis (Tip) and Y-Axis (
+Scroll through the available trigger options to select ``Enter Control''
+and click the Send Command button.
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Single elevation angle
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions to the Standby state and the primary state
+display box at the top of the Main says Standby State.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1756,7 +1763,8 @@ Single elevation angle
 6 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.21
+\textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
+From the StandbyState, send a Start State command.
 
 \medskip }
 \end{minipage}
@@ -1765,6 +1773,9 @@ Single elevation angle
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions into DisabledState and the current configuration
+parameters are maintained from the default parameters or from the
+previous DDS start command.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1780,21 +1791,18 @@ Single elevation angle
 7 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.23
+\textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
+From the DisabledState, send an Enable State Command.~
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
- & Test Data \\
- & \begin{minipage}[t]{15cm}{\footnotesize
-Allow a minimum of 30 seconds between moves
-
-\medskip }
-\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions into the EnabledState/Stationary substate, the
+motor drives are enabled and and motion can be commanded.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1810,7 +1818,13 @@ Allow a minimum of 30 seconds between moves
 8 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.24
+\textless{}conditional state\textgreater{}\\
+\textbf{FAULTSTATE}\\
+If a Fault occurs in any of the other states, the system will
+automatically transition to the Fault State. While in the Fault state,
+send a clearError.\\
+Note: If the fault that occurs goes through the interlock system, reset
+the safety relay switch and send a clearError command.
 
 \medskip }
 \end{minipage}
@@ -1819,6 +1833,8 @@ Allow a minimum of 30 seconds between moves
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The system transitions back to the OfflineState/PublishOnly substate.
+(Go back to Step 3)
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1834,15 +1850,26 @@ Allow a minimum of 30 seconds between moves
 9 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.26 and 3.5.27
+\textbf{Follow \emph{3.5.12 Positioning~}of the LSST Hexapods-Rotator
+Acceptance Test Procedure, Sheet 57-58.}
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The position of the hexapod is able to reach the commanded positions
+within the absolute accuracy specifications of 25um in Z, 125um in XY,
+83x10-5deg in RXRY, and 750x10-5deg in RZ.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1858,7 +1885,8 @@ Allow a minimum of 30 seconds between moves
 10 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.28
+\textbf{Follow \emph{3.5.13 Centers of Rotation~}of the LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 58-59.}
 
 \medskip }
 \end{minipage}
@@ -1866,13 +1894,15 @@ Allow a minimum of 30 seconds between moves
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-Perform at single elevation angle
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The center of rotation is able to be moved.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1888,7 +1918,8 @@ Perform at single elevation angle
 11 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-3.5.14 Cross Talk Motion
+\textbf{Follow \emph{3.5.15 Radial (X and Y) Translation Range~}of
+the}~\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
 
 \medskip }
 \end{minipage}
@@ -1896,14 +1927,307 @@ Perform at single elevation angle
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-Analyze data from 3.5.15, 3.5.17, and 3.5.19 test steps after testing to
-verify cross talk
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod is capable of moving to the positions in the XY plane listed
+in the Acceptance Test Procedure.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+12 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.17 Axial (Z) Translation Range~}of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 60.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod is capable of moving to the positions in the Z plane listed
+in the Acceptance Test Procedure.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+13 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.19 Rotational Range Around X-Axis (Tip) and
+Y-Axis (Tilt)~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
+Procedure, Sheet 61.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod is capable of moving to the positions in the RXRY plane
+listed in the Acceptance Test Procedure.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+14 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.21 Rotation Range Around Z-Axis (Twist)~}of
+the} \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 62.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod is capable of moving to the positions in the RZ-axis listed
+in the Acceptance Test Procedure.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+15 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.23 Hexapod Repeatability~}of the} \textbf{LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 63-70.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Allow a minimum of 30 seconds between moves
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The repeatability is as good as the test equipment can capture. This
+means that the repeatability is limited by the resolution of the test
+equipment.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+16 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.24 Hexapod Absolute Accuracy~}of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 70-74.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The accuracy of the hexapod is at least the following:\\[2\baselineskip]
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Axis & Required Accuracy (um, deg)\tabularnewline
+\midrule
+\endhead
+X & 125\tabularnewline
+Y & 125\tabularnewline
+Z & 25\tabularnewline
+RX & 0.00083\tabularnewline
+RY & 0.00083\tabularnewline
+RZ & 0.0075\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{NOTE:} If the test equipment is unable to provide a resolution
+of data required to calculate the accuracy, then it shall be as good as
+the resolution of the data procured.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+17 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow \emph{3.5.26 Hexapod Radial (X and Y) and Axial (Z)
+Velocity Range}\textbf{~and \emph{3.5.27}}\emph{~Hexapod Rotational
+Velocity~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
+Procedure, Sheet 75.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation:~}Only test this using synchronous mode.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The hexapod velocity exceeds the 106um/s in XY and 0.0062deg/s in RXYRY
+and RZ requirements.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+18 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow 3.5.28\emph{~Hexapod Heat Dissipation~}of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 75-76.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation:~}If no temperature probes are available, calculate
+the power by having an amp meter on the legs. This test can be done
+simultaneously with the other test steps.\\[2\baselineskip]
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+The current measured by the inductive current probes is calculated to
+meet the heat dissipation requirement.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Actual Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Status: \textbf{ Not Executed } \\ \hline
+
+19 & Description \\
+ & \begin{minipage}[t]{15cm}
+{\footnotesize
+\textbf{Follow\emph{~3.5.14 Cross Talk Motion~}of the} \textbf{LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
+
+\medskip }
+\end{minipage}
+\\ \cdashline{2-2}
+
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation}: Analyze data from 3.5.15, 3.5.17, and 3.5.19 test
+steps after testing to verify cross talk
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
+
+ & Expected Result \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+There is no cross-talk observed.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2704,8 +3028,8 @@ In enabled/stationary state, send a positionSet command of (2000um,
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-\textbf{Deviation:} Determine where the original pivot point is before
-sending a pivot command of (0, 0, 0)
+\textbf{Deviation}: Record any offset commands necessary to test before
+sending the move command.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2762,10 +3086,8 @@ In the enabled/stationary state, send a positionSet command of (2000um,
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-Deviation: Record any offset commands necessary to test before sending
-the move command.\\
-\textbf{{Note: Need input from Te-Wei on whether there are certain
-offset commands to issue before sending the move command.}}
+\textbf{Deviation}: Record any offset commands necessary to test before
+sending the move command.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2870,13 +3192,20 @@ The command is accepted.
 30 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
-In enabled/stationary state, send a positionSet command of
-({\textbf{VALID COMMAND}})
+In enabled/stationary state, send a positionSet command of (850um, 0um,
+500um, 0deg, 0deg, 0deg)
 
 \medskip }
 \end{minipage}
 \\ \cdashline{2-2}
 
+ & Test Data \\
+ & \begin{minipage}[t]{15cm}{\footnotesize
+\textbf{Deviation:~}This command can be any valid positionSet command
+within the newly configured limits.
+
+\medskip }
+\end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
