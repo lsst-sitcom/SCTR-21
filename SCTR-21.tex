@@ -109,12 +109,11 @@ The current status of test plan LVV-P68 in Jira is \textbf{ Draft }.
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
-   The M2 Hexapod will be verified in a climate controlled environment on
-the 3rd floor of the Summit Facility on the shipping/test plate.~
-
+  The M2 Hexapod will be verified on the 3rd floor of the Summit Facility
+on the shipping/test plate.~
 
   \subsection{Entry Criteria}
-   In order to test the M2 Hexapod functionality, the following criteria
+  In order to test the M2 Hexapod functionality, the following criteria
 must be met first:
 
 \begin{itemize}
@@ -129,11 +128,13 @@ must be met first:
   M2 Hexapod to be powered on and controlled
 \item
   The EFD must be set up to be able to store events and telemetry data
+\item
+  The temperature measurement system is operational and the EFD is able
+  to record temperature
 \end{itemize}
 
-
   \subsection{Exit Criteria}
-   In order for this event to be considered complete, the following
+  In order for this event to be considered complete, the following
 criteria must be met:
 
 \begin{itemize}
@@ -160,10 +161,8 @@ criteria must be met:
   project
 \end{itemize}
 
-
   \subsection{PMCS Activity}
-   See Epics/Tasks in Traceability Tab
-
+  See Epics/Tasks in Traceability Tab
 
 \newpage
 \section{Personnel}
@@ -185,9 +184,8 @@ The personnel involved in the test campaign is shown in the following table.
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  (1) Software Engineer\\
-(1) Hardware Engineer
- }
+{\small (1) Software Engineer\\
+(1) Hardware Engineer }
 \medskip
 \end{minipage}
 \\ \hline
@@ -195,9 +193,8 @@ The personnel involved in the test campaign is shown in the following table.
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  (1) Software Engineer\\
-(1) Hardware Engineer
- }
+{\small (1) Software Engineer\\
+(1) Hardware Engineer }
 \medskip
 \end{minipage}
 \\ \hline
@@ -205,9 +202,8 @@ The personnel involved in the test campaign is shown in the following table.
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
-{\small  (1) Software Engineer\\
-(1) Hardware Engineer
- }
+{\small (1) Software Engineer\\
+(1) Hardware Engineer }
 \medskip
 \end{minipage}
 \\ \hline
@@ -223,11 +219,9 @@ The personnel involved in the test campaign is shown in the following table.
 
 \begin{longtable}{p{2cm}p{2.5cm}p{9cm}p{2.5cm}}
 \toprule
-\multicolumn{3}{l}{ Test Plan {\bf LVV-P68:  M2 Hexapod Functional Re-verification and Integration with SAL 4.0
- }} & Draft \\\hline
+\multicolumn{3}{p{13.5cm}}{ Test Plan {\bf LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL 4.0 }} & Draft \\\hline
 
-  \multicolumn{3}{l}{ Test Cycle {\bf LVV-C147:  M2 Hexapod Re-verification and Integration Testing
- }} & Not Executed \\\hline
+  \multicolumn{3}{p{13.5cm}}{ Test Cycle {\bf LVV-C147: M2 Hexapod Re-verification and Integration Testing }} & Not Executed \\\hline
 
   {\bf \footnotesize test case} & {\bf \footnotesize status} & {\bf \footnotesize comment} & {\bf \footnotesize issues} \\\toprule
 
@@ -278,20 +272,17 @@ Not yet available.
 
 \subsection{Test Cycle LVV-C147 }
 
-Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{ M2 Hexapod Re-verification and Integration Testing
-}} in Jira.
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification and Integration Testing}} in Jira.
 
- M2 Hexapod Re-verification and Integration Testing
-\\
+M2 Hexapod Re-verification and Integration Testing\\
 Status: Not Executed
 
- Re-verify the hardware and software for the M2 Hexapod that was
+Re-verify the hardware and software for the M2 Hexapod that was
 previously tested by MOOG and verify the integrated M2 hexapod with SAL
 4.0.
 
-
 \subsubsection{Software Version/Baseline}
- \begin{enumerate}
+\begin{enumerate}
 \tightlist
 \item
   M2 Hexapod Control Software with SAL v4.0
@@ -299,20 +290,17 @@ previously tested by MOOG and verify the integrated M2 hexapod with SAL
   EFD with SAL v4.0
 \end{enumerate}
 
-
 \subsubsection{Configuration}
- No varying configuration between test cycles.
-
+No varying configuration between test cycles.
 
 \subsubsection{Test Cases in LVV-C147 Test Cycle}
 
-\paragraph{Test Case LVV-T1804 -  M2 Hexapod Software Functional Re-verification
- }\mbox{}\\
+\paragraph{Test Case LVV-T1804 - M2 Hexapod Software Functional Re-verification }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{\textit{ LVV-T1804 } }
 test case in Jira.
 
- The objective of this test case is to re-verify the functional
+The objective of this test case is to re-verify the functional
 requirements of the M2 hexapod's software, after shipment of the
 hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
 and \citeds{LTS-160}. This test case will only exercise the functionality that
@@ -357,9 +345,8 @@ performed previously and includes changes noted by the
 vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
 Manual} for more information on how to operate the hexapod.
 
-
 \textbf{ Preconditions}:\\
- Prior to the execution of this test case to re-verify the M2 Hexapod
+Prior to the execution of this test case to re-verify the M2 Hexapod
 hardware functional requirements, the following Summit tasks must be
 completed:
 
@@ -374,7 +361,6 @@ completed:
     \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
   \end{itemize}
 \end{itemize}
-
 
 Execution status: {\bf Not Executed }
 
@@ -1543,13 +1529,12 @@ state.
 
 \end{longtable}
 
-\paragraph{Test Case LVV-T1800 -  M2 Hexapod Hardware Functional Re-verification
- }\mbox{}\\
+\paragraph{Test Case LVV-T1800 - M2 Hexapod Hardware Functional Re-verification }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{\textit{ LVV-T1800 } }
 test case in Jira.
 
- The objective of this test case is to re-verify the functional
+The objective of this test case is to re-verify the functional
 requirements of the M2 hexapod's hardware, after shipment from the
 vendor's facility to the Summit, as defined in \citeds{LTS-206}. This test case
 will only exercise the functionality that was executed previously and
@@ -1564,16 +1549,20 @@ meets the following criteria:
 \item
   Only requires a laser tracker
 \item
+  Does require the M2 hexapod temperature sensors be operating
+\item
   Does \textbf{NOT} require the M2 hexapod to be loaded with an M2
   simulated mass or actual M2
 \item
   Does \textbf{NOT} require the M2 hexapod to be rotated to various
-  elevation angles.
+  elevation angles
+\item
+  Does \textbf{NOT~}require the M2 hexapod be in a climate controlled
+  environment
 \end{itemize}
 
-
 \textbf{ Preconditions}:\\
- Prior to the execution of this test case to re-verify the M2 Hexapod
+Prior to the execution of this test case to re-verify the M2 Hexapod
 hardware functional requirements, the following Summit tasks must be
 completed:
 
@@ -1596,7 +1585,6 @@ completed:
     \url{https://jira.lsstcorp.org/browse/SUMMIT-3951}
   \end{itemize}
 \end{itemize}
-
 
 Execution status: {\bf Not Executed }
 
@@ -2106,12 +2094,13 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
-The accuracy of the hexapod is at least the following:\\[\baselineskip]
+The accuracy of the hexapod is at least the following:\\[2\baselineskip]
 
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}[]{@{}ll@{}}
 \toprule
 Axis & Required Accuracy (um, deg)\tabularnewline
 \midrule
+%\endhead
 X & 125\tabularnewline
 Y & 125\tabularnewline
 Z & 25\tabularnewline
@@ -2119,8 +2108,7 @@ RX & 0.00083\tabularnewline
 RY & 0.00083\tabularnewline
 RZ & 0.0075\tabularnewline
 \bottomrule
-\end{tabular}
-\\[\baselineskip]
+\end{tabular}\\[\baselineskip]
 
 \textbf{NOTE:} If the test equipment is unable to provide a resolution
 of data required to calculate the accuracy, then it shall be as good as
@@ -2242,13 +2230,12 @@ There is no cross-talk observed.~
 
 \end{longtable}
 
-\paragraph{Test Case LVV-T1802 -  Integration of M2 Hexapod with SAL 4.0 (LSST)
- }\mbox{}\\
+\paragraph{Test Case LVV-T1802 - Integration of M2 Hexapod with SAL 4.0 (LSST) }\mbox{}\\
 
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{\textit{ LVV-T1802 } }
 test case in Jira.
 
- The objective of this test case is to re-verify the functional
+The objective of this test case is to re-verify the functional
 requirements of the M2 hexapod's software, after shipment of the
 hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
 and \citeds{LTS-160}. This test case will only exercise the functionality that
@@ -2273,11 +2260,16 @@ was executed previously and meets the following criteria:
     \textbf{Asynchronous mode is not a standard mode of operation}
   \end{itemize}
 \item
+  Does require the M2 hexapod temperature sensors be operating
+\item
   Does \textbf{NOT} require the M2 hexapod to be loaded with the M2
   simulated mass or actual M2
 \item
   Does \textbf{NOT} require the M2 hexapod to be rotated to various
   elevation angles.
+\item
+  Does \textbf{NOT~}require the M2 hexapod be in a climate controlled
+  environment
 \end{itemize}
 
 The software functional requirements were previously verified during the
@@ -2292,9 +2284,8 @@ Dec. 2019~}Confluence page which can be found linked in the Traceability
 tab.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
 Manual} for more information on how to operate the hexapod.
 
-
 \textbf{ Preconditions}:\\
- Prior to the execution of this test case to re-verify the M2 Hexapod
+Prior to the execution of this test case to re-verify the M2 Hexapod
 hardware functional requirements, the following Summit tasks must be
 completed:
 
@@ -2309,7 +2300,6 @@ completed:
     \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
   \end{itemize}
 \end{itemize}
-
 
 Execution status: {\bf Not Executed }
 
