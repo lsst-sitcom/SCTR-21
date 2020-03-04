@@ -72,8 +72,8 @@ LSST during the Factory Acceptance Test review.
 M2 Cell Assembly. It is attached to the spider spindle of the Top End
 Assembly of the TMA. Although the mass of the M2 mirror cell assembly is
 greater than the camera, the actuators of the M2 hexapod are identical
-to the Camera Hexapod's actuators. For this reason, the Camera Hexapod
-and M2 hexapod have the same operator's manual and similar test
+to the Camera Hexapod's actuators. For this reason, the M2 Hexapod and
+Camera hexapod have the same operator's manual and similar test
 procedures.~
 
 
@@ -122,7 +122,7 @@ must be met first:
   All the test setup for the Data Acquisition system must be completed
   and ready to record data for the laser tracker
 \item
-  The Laser tracker and SMR's are installed and setup
+  The Laser tracker and 4 SMR's are installed and setup
 \item
   All utilities and electrical connections are hooked up and allow the
   M2 Hexapod to be powered on and controlled
@@ -155,6 +155,10 @@ criteria must be met:
   A link to the verification artifacts used to produce the summary of
   results has been populated in the Verification Artifacts field of this
   Test Plan
+\item
+  For tests producing quantitative results reporting of the analysis
+  shall include traceability to the raw data of the test and estimates
+  for the statistical significance of the result(s).
 \item
   Any failures have been captured in the
   \href{https://jira.lsstcorp.org/projects/FRACAS/issues/}{FRACAS}
@@ -375,7 +379,7 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
+\textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
 Viewer desktop icon on the computer.
 
 \begin{itemize}
@@ -392,7 +396,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A prompt to enter the password is shown.
+A prompt to enter the password is shown.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -408,7 +412,7 @@ Viewer desktop icon on the computer.
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Enter the password ``lsst-vnc''
+Enter the password ``lsst-vnc''
 
 \begin{itemize}
 \tightlist
@@ -424,7 +428,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The EUI is in the Offline State/PublishOnly substate and is able to
+The EUI is in the Offline State/PublishOnly substate and is able to
 publish through SAL but cannot receive commands.
 
 \medskip }
@@ -441,7 +445,7 @@ publish through SAL but cannot receive commands.
 3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE/AVAILABLESTATE}\\
+\textbf{OFFLINESTATE/AVAILABLESTATE}\\
 On the Main tab, select the ``Offline SubState Cmd'' field in the
 Commands to Send section, set the Offline SubState Triggers to ``System
 Ready'' and click on the Send Command button.\\
@@ -454,7 +458,7 @@ Ready'' and click on the Send Command button.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from the OfflineState/PublishOnly substate to the
+The system transitions from the OfflineState/PublishOnly substate to the
 OfflineState/AvailableState substate and the Command Source says
 eGUI.\\[2\baselineskip]
 
@@ -472,7 +476,7 @@ eGUI.\\[2\baselineskip]
 4 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
+\textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
 Click on the State Command field in the Commands to Send section.\\
 \includegraphics[width=1.79167in]{jira_imgs/1028.png}
 
@@ -483,7 +487,7 @@ Click on the State Command field in the Commands to Send section.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The State Triggers dialogue box shown below becomes visible.\\
+The State Triggers dialogue box shown below becomes visible.\\
 \includegraphics[width=1.79167in]{jira_imgs/1029.png}
 
 \medskip }
@@ -500,7 +504,7 @@ Click on the State Command field in the Commands to Send section.\\
 5 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Scroll through the available trigger options to select ``Enter Control''
+Scroll through the available trigger options to select ``Enter Control''
 and click the Send Command button.
 
 \medskip }
@@ -510,7 +514,7 @@ and click the Send Command button.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions to the Standby state and the primary state
+The system transitions to the Standby state and the primary state
 display box at the top of the Main says Standby State.
 
 \medskip }
@@ -527,7 +531,7 @@ display box at the top of the Main says Standby State.
 6 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
+\textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
 From the StandbyState, send a Start State command.
 
 \medskip }
@@ -537,7 +541,7 @@ From the StandbyState, send a Start State command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into DisabledState and the current configuration
+The system transitions into DisabledState and the current configuration
 parameters are maintained from the default parameters or from the
 previous DDS start command.~
 
@@ -555,7 +559,7 @@ previous DDS start command.~
 7 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
+\textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
 From the DisabledState, send an Enable State Command.~
 
 \medskip }
@@ -565,7 +569,7 @@ From the DisabledState, send an Enable State Command.~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the EnabledState/Stationary substate, the
+The system transitions into the EnabledState/Stationary substate, the
 motor drives are enabled and and motion can be commanded.~
 
 \medskip }
@@ -582,7 +586,7 @@ motor drives are enabled and and motion can be commanded.~
 8 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textless{}conditional state\textgreater{}\\
+\textless{}conditional state\textgreater{}\\
 \textbf{FAULTSTATE}\\
 If a Fault occurs in any of the other states, the system will
 automatically transition to the Fault State. While in the Fault state,
@@ -597,7 +601,7 @@ the safety relay switch and send a clearError command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions back to the OfflineState/PublishOnly substate.
+The system transitions back to the OfflineState/PublishOnly substate.
 (Go back to Step 3)
 
 \medskip }
@@ -614,7 +618,7 @@ the safety relay switch and send a clearError command.
 9 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.1 of the attached Software Acceptance Test
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#1 - Synchronous PositionSet and Move
 Commands}\\[2\baselineskip]With the synchronous button enabled and in
@@ -628,7 +632,7 @@ enabled/stationary state, send a positionSet command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -644,7 +648,7 @@ enabled/stationary state, send a positionSet command of (0um, 0um,
 10 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- With the synchronous button enabled and in enabled/stationary state,
+With the synchronous button enabled and in enabled/stationary state,
 send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
 .002deg) using the EUI.
 
@@ -655,7 +659,7 @@ send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -671,7 +675,7 @@ send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
 11 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command using the EUI.
+Send a move command using the EUI.
 
 \medskip }
 \end{minipage}
@@ -680,7 +684,7 @@ send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to the last commanded position of (2000um, -3500um,
+The hexapod moves to the last commanded position of (2000um, -3500um,
 200um, .01 deg, -.05deg, .002deg) and the actuators complete the move at
 nearly the same time as seen on the motion complete lights on the
 telemetry screen.
@@ -699,7 +703,7 @@ telemetry screen.
 12 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.1 of the attached Software Acceptance Test
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#2 - Pivot, PositionSet and Move
 Commands}\\[2\baselineskip]In enabled/stationary state and at the last
@@ -714,7 +718,7 @@ using the EUI.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The actuator positions do not change, but the hexapod position is
+The actuator positions do not change, but the hexapod position is
 (-407um, -3982um, 199um, 0.01deg, -0.05deg, 0.002deg)
 
 \medskip }
@@ -731,7 +735,7 @@ using the EUI.
 13 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the enabled/stationary state, send a positionSet command of (2000um,
+In the enabled/stationary state, send a positionSet command of (2000um,
 -3500um, 200um, .01 deg, -.05deg, .002deg) using the EUI.
 
 \medskip }
@@ -741,7 +745,7 @@ using the EUI.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -757,7 +761,7 @@ using the EUI.
 14 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command using the EUI.
+Send a move command using the EUI.
 
 \medskip }
 \end{minipage}
@@ -766,7 +770,7 @@ using the EUI.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to the commanded position of (2000um, -3500um, 200um,
+The hexapod moves to the commanded position of (2000um, -3500um, 200um,
 .01 deg, -.05deg, .002deg) and the actuators change position to account
 for the new pivot point.
 
@@ -784,7 +788,7 @@ for the new pivot point.
 15 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.1 of the attached Software Acceptance Test
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#4 - Synchronous Offset and Move
 Commands}\\[2\baselineskip]With the synchronous button enabled and in
@@ -798,7 +802,7 @@ enabled/stationary state, send a positionSet command of (500um, 800um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -814,7 +818,7 @@ enabled/stationary state, send a positionSet command of (500um, 800um,
 16 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- With the synchronous button enabled and in enabled/stationary state,
+With the synchronous button enabled and in enabled/stationary state,
 send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
 
 \medskip }
@@ -824,7 +828,7 @@ send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -840,7 +844,7 @@ send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
 17 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -849,7 +853,7 @@ send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves only 2000um in Z from the previous position and the
+The hexapod moves only 2000um in Z from the previous position and the
 actuators complete the move at nearly the same time as seen on the
 motion complete lights on the telemetry screen.
 
@@ -867,7 +871,7 @@ motion complete lights on the telemetry screen.
 18 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Instead of Asynchronous Test}\\
+\textbf{Instead of Asynchronous Test}\\
 {With the synchronous button enabled and in enabled/stationary
 state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
 0.1deg, 0deg, 0deg)
@@ -879,7 +883,7 @@ state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -895,7 +899,7 @@ state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
 19 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -904,7 +908,7 @@ state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
 0deg, 0deg)
 
 \medskip }
@@ -921,7 +925,7 @@ state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
 20 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- With the synchronous button enabled and in enabled/stationary
+With the synchronous button enabled and in enabled/stationary
 state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
 0.1deg, 0deg)
 
@@ -932,7 +936,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -948,7 +952,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
 21 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -957,7 +961,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to the commanded position of (0um, 0um, 0um, 0deg,
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0deg,
 0.1deg, 0deg)
 
 \medskip }
@@ -974,7 +978,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
 22 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- With the synchronous button enabled and in enabled/stationary
+With the synchronous button enabled and in enabled/stationary
 state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
 0.1deg, 0deg)
 
@@ -985,7 +989,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1001,7 +1005,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
 23 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -1010,7 +1014,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
 0.1deg, 0deg)
 
 \medskip }
@@ -1027,7 +1031,7 @@ state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
 24 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.1 of the attached Software Acceptance Test
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#5 - Stop Commands}\\[2\baselineskip]In
 enabled/stationary state, send a position set command of (0um, 0um,
@@ -1040,7 +1044,7 @@ enabled/stationary state, send a position set command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1056,7 +1060,7 @@ enabled/stationary state, send a position set command of (0um, 0um,
 25 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -1065,7 +1069,7 @@ enabled/stationary state, send a position set command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod starts to move to the commanded position.
+The hexapod starts to move to the commanded position.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1081,7 +1085,7 @@ enabled/stationary state, send a position set command of (0um, 0um,
 26 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- While the hexapod is moving, send a stop command.~
+While the hexapod is moving, send a stop command.~
 
 \medskip }
 \end{minipage}
@@ -1090,7 +1094,7 @@ enabled/stationary state, send a position set command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod quickly comes to a stop prior to reaching the commanded
+The hexapod quickly comes to a stop prior to reaching the commanded
 position.
 
 \medskip }
@@ -1107,7 +1111,7 @@ position.
 27 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.3.1 EUI Tests of the attached Software Acceptance Test
+\textbf{Section 3.3.1 EUI Tests of the attached Software Acceptance Test
 Procedure}\\
 At startup, confirm that the system starts in the Offline/PublishOnly
 state.
@@ -1119,7 +1123,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The rotator starts in the Offline/PublishOnly state.
+The rotator starts in the Offline/PublishOnly state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1135,7 +1139,7 @@ state.
 28 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send an offline substate trigger of systemReady.
+Send an offline substate trigger of systemReady.
 
 \medskip }
 \end{minipage}
@@ -1144,7 +1148,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Offline/Available substate.
+The system transitions into the Offline/Available substate.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1160,7 +1164,7 @@ state.
 29 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send an EnterControl trigger.
+Send an EnterControl trigger.
 
 \medskip }
 \end{minipage}
@@ -1169,7 +1173,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Offline/Available to Standby state.
+The system transitions from Offline/Available to Standby state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1185,7 +1189,7 @@ state.
 30 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a Start trigger.
+Send a Start trigger.
 
 \medskip }
 \end{minipage}
@@ -1194,7 +1198,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Standby to Disabled state.
+The system transitions from Standby to Disabled state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1210,7 +1214,7 @@ state.
 31 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send an Enable trigger.
+Send an Enable trigger.
 
 \medskip }
 \end{minipage}
@@ -1219,7 +1223,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Disabled to Enabled state.
+The system transitions from Disabled to Enabled state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1235,7 +1239,7 @@ state.
 32 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a Disable trigger.
+Send a Disable trigger.
 
 \medskip }
 \end{minipage}
@@ -1244,7 +1248,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Enabled to Disabled state.
+The system transitions from Enabled to Disabled state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1260,7 +1264,7 @@ state.
 33 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a Standby trigger.
+Send a Standby trigger.
 
 \medskip }
 \end{minipage}
@@ -1269,7 +1273,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Disabled state to Standby state.
+The system transitions from Disabled state to Standby state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1285,7 +1289,7 @@ state.
 34 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a exitControl trigger.
+Send a exitControl trigger.
 
 \medskip }
 \end{minipage}
@@ -1294,7 +1298,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Standby state to Offline state.
+The system transitions from Standby state to Offline state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1310,7 +1314,7 @@ state.
 35 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Return to the Enabled state and trip the safety interlock switch.
+Return to the Enabled state and trip the safety interlock switch.
 
 \medskip }
 \end{minipage}
@@ -1319,7 +1323,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions to Fault state.
+The system transitions to Fault state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1335,7 +1339,7 @@ state.
 36 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Reset the safety interlock and send a ClearError trigger.
+Reset the safety interlock and send a ClearError trigger.
 
 \medskip }
 \end{minipage}
@@ -1344,7 +1348,7 @@ state.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from Fault state to Offline state
+The system transitions from Fault state to Offline state
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1360,7 +1364,7 @@ state.
 37 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 4.1 Hexapod Events of the attached Software Acceptance
+\textbf{Section 4.1 Hexapod Events of the attached Software Acceptance
 Test Procedure}\\[2\baselineskip]In the Enabled/Stationary state, unplug
 a motor encoder cable for one of the actuators.
 
@@ -1370,7 +1374,7 @@ a motor encoder cable for one of the actuators.
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation:~}Perform the following set of steps using the EUI
+\textbf{Deviation:~}Perform the following set of steps using the EUI
 instead of the DDS and verify the events are displayed on the EUI.
 
 \medskip }
@@ -1378,7 +1382,7 @@ instead of the DDS and verify the events are displayed on the EUI.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Drive Fault error event is created and the system transitions to Fault
+A Drive Fault error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -1395,7 +1399,7 @@ state.
 38 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Enabled/Stationary state, unplug a linear encoder cable for one
+In the Enabled/Stationary state, unplug a linear encoder cable for one
 of the actuators.~
 
 \medskip }
@@ -1405,7 +1409,7 @@ of the actuators.~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Drive Fault error event is created and the system transitions to Fault
+A Drive Fault error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -1422,7 +1426,7 @@ state.
 39 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Unplug a motor power cable from one of the actuators and command a
+Unplug a motor power cable from one of the actuators and command a
 PositionSet/Move.~
 
 \medskip }
@@ -1432,7 +1436,7 @@ PositionSet/Move.~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Following Error event is created and the system transitions to Fault
+A Following Error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -1449,7 +1453,7 @@ state.
 40 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Activate an extension limit switch on one of the actuators by removing
+Activate an extension limit switch on one of the actuators by removing
 the limit switch cover and manually tripping.~
 
 \medskip }
@@ -1459,7 +1463,7 @@ the limit switch cover and manually tripping.~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- An Extended Limit Switch error event is created and the system
+An Extended Limit Switch error event is created and the system
 transitions into Fault state.
 
 \medskip }
@@ -1476,7 +1480,7 @@ transitions into Fault state.
 41 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Activate a retraction limit switch on one of the actuators by removing
+Activate a retraction limit switch on one of the actuators by removing
 the limit switch cover and manually tripping.
 
 \medskip }
@@ -1486,7 +1490,7 @@ the limit switch cover and manually tripping.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Retracted Limit Switch error event is created and the system
+A Retracted Limit Switch error event is created and the system
 transitions into Fault state.
 
 \medskip }
@@ -1503,7 +1507,7 @@ transitions into Fault state.
 42 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Unplug the Ethercat cable between the control PC and the first Copley
+Unplug the Ethercat cable between the control PC and the first Copley
 XE2 drive.
 
 \medskip }
@@ -1513,7 +1517,7 @@ XE2 drive.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- An Ethercat Lost event is created and the system transitions to Fault
+An Ethercat Lost event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -1599,7 +1603,7 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
+\textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
 Viewer desktop icon on the computer.
 
 \begin{itemize}
@@ -1616,7 +1620,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A prompt to enter the password is shown.
+A prompt to enter the password is shown.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1632,7 +1636,7 @@ Viewer desktop icon on the computer.
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Enter the password ``lsst-vnc''
+Enter the password ``lsst-vnc''
 
 \begin{itemize}
 \tightlist
@@ -1648,7 +1652,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The EUI is in the Offline State/PublishOnly substate and is able to
+The EUI is in the Offline State/PublishOnly substate and is able to
 publish through SAL but cannot receive commands.
 
 \medskip }
@@ -1665,7 +1669,7 @@ publish through SAL but cannot receive commands.
 3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE/AVAILABLESTATE}\\
+\textbf{OFFLINESTATE/AVAILABLESTATE}\\
 On the Main tab, select the ``Offline SubState Cmd'' field in the
 Commands to Send section, set the Offline SubState Triggers to ``System
 Ready'' and click on the Send Command button.\\
@@ -1678,7 +1682,7 @@ Ready'' and click on the Send Command button.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from the OfflineState/PublishOnly substate to the
+The system transitions from the OfflineState/PublishOnly substate to the
 OfflineState/AvailableState substate and the Command Source says
 eGUI.\\[2\baselineskip]
 
@@ -1696,7 +1700,7 @@ eGUI.\\[2\baselineskip]
 4 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
+\textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
 Click on the State Command field in the Commands to Send section.\\
 \includegraphics[width=1.79167in]{jira_imgs/1028.png}
 
@@ -1707,7 +1711,7 @@ Click on the State Command field in the Commands to Send section.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The State Triggers dialogue box shown below becomes visible.\\
+The State Triggers dialogue box shown below becomes visible.\\
 \includegraphics[width=1.79167in]{jira_imgs/1029.png}
 
 \medskip }
@@ -1724,7 +1728,7 @@ Click on the State Command field in the Commands to Send section.\\
 5 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Scroll through the available trigger options to select ``Enter Control''
+Scroll through the available trigger options to select ``Enter Control''
 and click the Send Command button.
 
 \medskip }
@@ -1734,7 +1738,7 @@ and click the Send Command button.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions to the Standby state and the primary state
+The system transitions to the Standby state and the primary state
 display box at the top of the Main says Standby State.
 
 \medskip }
@@ -1751,7 +1755,7 @@ display box at the top of the Main says Standby State.
 6 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
+\textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
 From the StandbyState, send a Start State command.
 
 \medskip }
@@ -1761,7 +1765,7 @@ From the StandbyState, send a Start State command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into DisabledState and the current configuration
+The system transitions into DisabledState and the current configuration
 parameters are maintained from the default parameters or from the
 previous DDS start command.~
 
@@ -1779,7 +1783,7 @@ previous DDS start command.~
 7 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
+\textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
 From the DisabledState, send an Enable State Command.~
 
 \medskip }
@@ -1789,7 +1793,7 @@ From the DisabledState, send an Enable State Command.~
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the EnabledState/Stationary substate, the
+The system transitions into the EnabledState/Stationary substate, the
 motor drives are enabled and and motion can be commanded.~
 
 \medskip }
@@ -1806,7 +1810,7 @@ motor drives are enabled and and motion can be commanded.~
 8 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textless{}conditional state\textgreater{}\\
+\textless{}conditional state\textgreater{}\\
 \textbf{FAULTSTATE}\\
 If a Fault occurs in any of the other states, the system will
 automatically transition to the Fault State. While in the Fault state,
@@ -1821,7 +1825,7 @@ the safety relay switch and send a clearError command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions back to the OfflineState/PublishOnly substate.
+The system transitions back to the OfflineState/PublishOnly substate.
 (Go back to Step 3)
 
 \medskip }
@@ -1838,7 +1842,7 @@ the safety relay switch and send a clearError command.
 9 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.12 Positioning~}of the LSST Hexapods-Rotator
+\textbf{Follow \emph{3.5.12 Positioning~}of the LSST Hexapods-Rotator
 Acceptance Test Procedure, Sheet 57-58.}
 
 \medskip }
@@ -1847,7 +1851,7 @@ Acceptance Test Procedure, Sheet 57-58.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -1855,7 +1859,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The position of the hexapod is able to reach the commanded positions
+The position of the hexapod is able to reach the commanded positions
 within the absolute accuracy specifications of 25um in Z, 125um in XY,
 83x10-5deg in RXRY, and 750x10-5deg in RZ.
 
@@ -1873,7 +1877,7 @@ within the absolute accuracy specifications of 25um in Z, 125um in XY,
 10 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.13 Centers of Rotation~}of the LSST
+\textbf{Follow \emph{3.5.13 Centers of Rotation~}of the LSST
 Hexapods-Rotator Acceptance Test Procedure, Sheet 58-59.}
 
 \medskip }
@@ -1882,7 +1886,7 @@ Hexapods-Rotator Acceptance Test Procedure, Sheet 58-59.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -1890,7 +1894,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The center of rotation is able to be moved.
+The center of rotation is able to be moved.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -1906,7 +1910,7 @@ performance payload.
 11 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.15 Radial (X and Y) Translation Range~}of
+\textbf{Follow \emph{3.5.15 Radial (X and Y) Translation Range~}of
 the}~\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
 
 \medskip }
@@ -1915,7 +1919,7 @@ the}~\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -1923,7 +1927,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod is capable of moving to the positions in the XY plane listed
+The hexapod is capable of moving to the positions in the XY plane listed
 in the Acceptance Test Procedure.
 
 \medskip }
@@ -1940,7 +1944,7 @@ in the Acceptance Test Procedure.
 12 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.17 Axial (Z) Translation Range~}of the}
+\textbf{Follow \emph{3.5.17 Axial (Z) Translation Range~}of the}
 \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 60.}
 
 \medskip }
@@ -1949,7 +1953,7 @@ in the Acceptance Test Procedure.
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -1957,7 +1961,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod is capable of moving to the positions in the Z plane listed
+The hexapod is capable of moving to the positions in the Z plane listed
 in the Acceptance Test Procedure.
 
 \medskip }
@@ -1974,7 +1978,7 @@ in the Acceptance Test Procedure.
 13 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.19 Rotational Range Around X-Axis (Tip) and
+\textbf{Follow \emph{3.5.19 Rotational Range Around X-Axis (Tip) and
 Y-Axis (Tilt)~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
 Procedure, Sheet 61.}
 
@@ -1984,7 +1988,7 @@ Procedure, Sheet 61.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -1992,7 +1996,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod is capable of moving to the positions in the RXRY plane
+The hexapod is capable of moving to the positions in the RXRY plane
 listed in the Acceptance Test Procedure.
 
 \medskip }
@@ -2009,7 +2013,7 @@ listed in the Acceptance Test Procedure.
 14 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.21 Rotation Range Around Z-Axis (Twist)~}of
+\textbf{Follow \emph{3.5.21 Rotation Range Around Z-Axis (Twist)~}of
 the} \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 62.}
 
 \medskip }
@@ -2018,7 +2022,7 @@ the} \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 62.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
+\textbf{Deviation}: Test at a single elevation angle and with no
 performance payload.
 
 \medskip }
@@ -2026,7 +2030,7 @@ performance payload.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod is capable of moving to the positions in the RZ-axis listed
+The hexapod is capable of moving to the positions in the RZ-axis listed
 in the Acceptance Test Procedure.
 
 \medskip }
@@ -2043,7 +2047,7 @@ in the Acceptance Test Procedure.
 15 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.23 Hexapod Repeatability~}of the} \textbf{LSST
+\textbf{Follow \emph{3.5.23 Hexapod Repeatability~}of the} \textbf{LSST
 Hexapods-Rotator Acceptance Test Procedure, Sheet 63-70.}
 
 \medskip }
@@ -2052,16 +2056,14 @@ Hexapods-Rotator Acceptance Test Procedure, Sheet 63-70.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Allow a minimum of 30 seconds between moves.\\
-An analysis on the statistical significance of the results is required
-to show compliance with the requirement.
+\textbf{Deviation}: Allow a minimum of 30 seconds between moves.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The repeatability of the hexapod is likely better than can be determined
+The repeatability of the hexapod is likely better than can be determined
 by the test equipment. This test will likely falsely show a deficiency
 in the hexapod performance as a result of test equipment accuracy/
 repeatability limitation.
@@ -2080,7 +2082,7 @@ repeatability limitation.
 16 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.24 Hexapod Absolute Accuracy~}of the}
+\textbf{Follow \emph{3.5.24 Hexapod Absolute Accuracy~}of the}
 \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 70-74.}
 
 \medskip }
@@ -2089,17 +2091,15 @@ repeatability limitation.
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Test at a single elevation angle and with no
-performance payload.\\
-An analysis on the statistical significance of the results is required
-to show compliance with the requirement.
+\textbf{Deviation}: Test at a single elevation angle and with no
+performance payload.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The accuracy of the hexapod is at least the following:\\[2\baselineskip]
+The accuracy of the hexapod is at least the following:\\[2\baselineskip]
 
 \begin{tabular}[]{@{}ll@{}}
 \toprule
@@ -2134,7 +2134,7 @@ repeatability limitation.~
 17 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow \emph{3.5.26 Hexapod Radial (X and Y) and Axial (Z)
+\textbf{Follow \emph{3.5.26 Hexapod Radial (X and Y) and Axial (Z)
 Velocity Range}\textbf{~and \emph{3.5.27}}\emph{~Hexapod Rotational
 Velocity~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
 Procedure, Sheet 75.}
@@ -2145,14 +2145,14 @@ Procedure, Sheet 75.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation:~}Only test this using synchronous mode.
+\textbf{Deviation:~}Only test this using synchronous mode.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod velocity exceeds the 106um/s in XY and 0.0062deg/s in RXYRY
+The hexapod velocity exceeds the 106um/s in XY and 0.0062deg/s in RXYRY
 and RZ requirements.
 
 \medskip }
@@ -2169,7 +2169,7 @@ and RZ requirements.
 18 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow 3.5.28\emph{~Hexapod Heat Dissipation~}of the}
+\textbf{Follow 3.5.28\emph{~Hexapod Heat Dissipation~}of the}
 \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 75-76.}
 
 \medskip }
@@ -2178,7 +2178,7 @@ and RZ requirements.
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation:~}Calculate the power by having an amp meter on the
+\textbf{Deviation:~}Calculate the power by having an amp meter on the
 legs. This test can be done simultaneously with the other test
 steps.\\[2\baselineskip]
 
@@ -2187,7 +2187,7 @@ steps.\\[2\baselineskip]
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The current measured by the inductive current probes is calculated to
+The current measured by the inductive current probes is calculated to
 meet the heat dissipation requirement.
 
 \medskip }
@@ -2204,7 +2204,7 @@ meet the heat dissipation requirement.
 19 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Follow\emph{~3.5.14 Cross Talk Motion~}of the} \textbf{LSST
+\textbf{Follow\emph{~3.5.14 Cross Talk Motion~}of the} \textbf{LSST
 Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
 
 \medskip }
@@ -2213,7 +2213,7 @@ Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Analyze data from 3.5.15, 3.5.17, and 3.5.19 test
+\textbf{Deviation}: Analyze data from 3.5.15, 3.5.17, and 3.5.19 test
 steps after testing to verify cross talk.
 
 \medskip }
@@ -2221,7 +2221,7 @@ steps after testing to verify cross talk.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no cross-talk observed.~
+There is no cross-talk observed.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2320,7 +2320,7 @@ Detailed steps results:
 1 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
+\textbf{STARTING THE EUI}\\[2\baselineskip]Double click the Hexapod GUI
 Viewer desktop icon on the computer.
 
 \begin{itemize}
@@ -2337,7 +2337,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A prompt to enter a password is shown.~
+A prompt to enter a password is shown.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2353,7 +2353,7 @@ Viewer desktop icon on the computer.
 2 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Enter the password ``lsst-vnc''
+Enter the password ``lsst-vnc''
 
 \begin{itemize}
 \tightlist
@@ -2369,7 +2369,7 @@ Viewer desktop icon on the computer.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The EUI is in the Offline State/PublishOnly substate and is able to
+The EUI is in the Offline State/PublishOnly substate and is able to
 publish through SAL but cannot receive commands.
 
 \medskip }
@@ -2386,7 +2386,7 @@ publish through SAL but cannot receive commands.
 3 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE/PUBLISHONLY -\textgreater{}
+\textbf{OFFLINESTATE/PUBLISHONLY -\textgreater{}
 OFFLINESTATE/AVAILABLESTATE}\\
 On the Main tab, select the ``Offline SubState Cmd'' field in the
 Commands to Send section, set the Offline SubState Triggers to ``System
@@ -2400,7 +2400,7 @@ Ready'' and click on the Send Command button.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions from the OfflineState/PublishOnly substate to the
+The system transitions from the OfflineState/PublishOnly substate to the
 OfflineState/AvailableState substate.\\[2\baselineskip]
 
 \medskip }
@@ -2417,7 +2417,7 @@ OfflineState/AvailableState substate.\\[2\baselineskip]
 4 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{SWITCHING TO DDS MODE}\\
+\textbf{SWITCHING TO DDS MODE}\\
 \includegraphics[width=1.68750in]{jira_imgs/1025.png}If the Command
 Source does not show DDS, go to the Parameters tab, select DDS under the
 Command Source and click the Set Cmd Source button.\\
@@ -2433,7 +2433,7 @@ Source must show DDS in order to receive DDS commands.}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system is capable of receiving/responding to DDS commands.
+The system is capable of receiving/responding to DDS commands.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2449,7 +2449,7 @@ Source must show DDS in order to receive DDS commands.}
 5 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
+\textbf{OFFLINESTATE -\textgreater{} STANDBYSTATE}\\
 The system receives an enterControl State Transition command through
 DDS.
 
@@ -2460,7 +2460,7 @@ DDS.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the StandbyState and is capable of
+The system transitions into the StandbyState and is capable of
 receiving/responding to DDS commands.
 
 \medskip }
@@ -2477,7 +2477,7 @@ receiving/responding to DDS commands.
 6 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
+\textbf{STANDBYSTATE -\textgreater{} DISABLEDSTATE}\\
 From the StandbyState, send a start command through the DDS.
 
 \medskip }
@@ -2487,7 +2487,7 @@ From the StandbyState, send a start command through the DDS.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into DisabledState after receiving/responding to
+The system transitions into DisabledState after receiving/responding to
 DDS command and the wrapper in the PXI real time controller looks for
 the configuration file.\\[2\baselineskip]If the configuration file is
 invalid or out of range, the system will transition into a Fault State
@@ -2506,7 +2506,7 @@ invalid or out of range, the system will transition into a Fault State
 7 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
+\textbf{DISABLEDSTATE -\textgreater{} ENABLEDSTATE}\\
 From the DisabledState, send an enable state command through the DDS.\\
 \textbf{}
 
@@ -2517,7 +2517,7 @@ From the DisabledState, send an enable state command through the DDS.\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the EnabledState/Stationary substate, the
+The system transitions into the EnabledState/Stationary substate, the
 motor drives are enabled, motor brakes are released and the system is
 capable of receiving/responding to DDS commands.\\[2\baselineskip]
 
@@ -2535,7 +2535,7 @@ capable of receiving/responding to DDS commands.\\[2\baselineskip]
 8 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{FAULTSTATE}\\
+\textbf{FAULTSTATE}\\
 If a Fault occurs in any of the other states, the system will
 automatically transition to the Fault State. While in the Fault state,
 send a clearError command through the DDS.\\
@@ -2549,7 +2549,7 @@ the safety relay switch and send a clearError command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions back to the OfflineState/PublishOnly substate and
+The system transitions back to the OfflineState/PublishOnly substate and
 is not capable of receiving/responding to DDS commands. (Go back to Step
 3)
 
@@ -2567,7 +2567,7 @@ is not capable of receiving/responding to DDS commands. (Go back to Step
 9 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{{MOVE TEST}}\\
+\textbf{{MOVE TEST}}\\
 \textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#1 - Synchronous PositionSet and Move Commands}\\
@@ -2581,7 +2581,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod does not move.
+The hexapod does not move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2597,7 +2597,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 10 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- With the synchronous button enabled and in enabled/stationary state,
+With the synchronous button enabled and in enabled/stationary state,
 send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 0.002deg).
 
@@ -2608,7 +2608,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod does not move
+The hexapod does not move
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2624,7 +2624,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 11 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -2633,7 +2633,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The hexapod moves to (2000um, -3500um, 200um, 0.01deg, -.05deg,
@@ -2656,7 +2656,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 12 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the corresponding DDS events that were generated.
+Record the corresponding DDS events that were generated.
 
 \medskip }
 \end{minipage}
@@ -2665,7 +2665,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The controllerState.enabledSubstate goes to MOVING\_POINT\_TO\_POINT
@@ -2688,7 +2688,7 @@ send a positionSet command of (2000um, -3500um, 200um, 0.01deg, -.05deg,
 13 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.2 of the attached Software Acceptance Test
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#5 - Stop Commands}\\
 In the enabled/stationary state, send a position set command of (0um,
@@ -2701,7 +2701,7 @@ In the enabled/stationary state, send a position set command of (0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2717,7 +2717,7 @@ In the enabled/stationary state, send a position set command of (0um,
 14 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send move command.
+Send move command.
 
 \medskip }
 \end{minipage}
@@ -2726,7 +2726,7 @@ In the enabled/stationary state, send a position set command of (0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod begins to move.
+The hexapod begins to move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2742,7 +2742,7 @@ In the enabled/stationary state, send a position set command of (0um,
 15 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Before the hexapod completes its movement, send a stop command.
+Before the hexapod completes its movement, send a stop command.
 
 \medskip }
 \end{minipage}
@@ -2751,7 +2751,7 @@ In the enabled/stationary state, send a position set command of (0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The hexapod stops before reaching the previously commanded position
@@ -2771,7 +2771,7 @@ In the enabled/stationary state, send a position set command of (0um,
 16 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the corresponding DDS events that were generated.
+Record the corresponding DDS events that were generated.
 
 \medskip }
 \end{minipage}
@@ -2780,7 +2780,7 @@ In the enabled/stationary state, send a position set command of (0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The controllerState.enabledSubstate goes to CONTROLLED\_STOPPING when
@@ -2803,7 +2803,7 @@ In the enabled/stationary state, send a position set command of (0um,
 17 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.2 of the attached Software Acceptance Test
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#9 - positionSet and moveLUT}\\
 In enabled/stationary state, send a positionSet command of (0um, 0um,
@@ -2816,7 +2816,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2832,7 +2832,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 18 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (0um, 0um,
+In enabled/stationary state, send a positionSet command of (0um, 0um,
 800um, 0deg, 0deg, 0deg)
 
 \medskip }
@@ -2842,7 +2842,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2858,7 +2858,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 19 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a moveLUT (180deg, 60deg, and 10deg) command
+Send a moveLUT (180deg, 60deg, and 10deg) command
 
 \medskip }
 \end{minipage}
@@ -2867,7 +2867,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod moves to a different position than (0um, 0um, 800um, 0deg,
+The hexapod moves to a different position than (0um, 0um, 800um, 0deg,
 0deg, 0deg) and the actuators complete the move at nearly the same time.
 
 \medskip }
@@ -2884,7 +2884,7 @@ In enabled/stationary state, send a positionSet command of (0um, 0um,
 20 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- {\textbf{OFFSET TEST}}\\
+{\textbf{OFFSET TEST}}\\
 \textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#4 - Synchronous Offset and Move Commands}\\
@@ -2897,14 +2897,14 @@ In enabled/stationary state, send a positionSet command of (500um,
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- 
+
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2920,7 +2920,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 21 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send an offset command of (0um, 0um,
+In enabled/stationary state, send an offset command of (0um, 0um,
 2000um, 0deg, 0deg, 0deg).
 
 \medskip }
@@ -2930,7 +2930,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -2946,7 +2946,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 22 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.~
+Send a move command.~
 
 \medskip }
 \end{minipage}
@@ -2955,7 +2955,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The hexapod moves only 2000um in Z from the previous position
@@ -2977,7 +2977,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 23 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the corresponding DDS events that were generated.
+Record the corresponding DDS events that were generated.
 
 \medskip }
 \end{minipage}
@@ -2986,7 +2986,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \begin{itemize}
+\begin{itemize}
 \tightlist
 \item
   The controllerState.enabledSubstate goes to MOVING\_POINT\_TO\_POINT
@@ -3012,7 +3012,7 @@ In enabled/stationary state, send a positionSet command of (500um,
 24 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.1.2 of the attached Software Acceptance Test
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#2 -Pivot, PositionSet and Move Commands}\\
 In enabled/stationary state, send a positionSet command of (2000um,
@@ -3024,7 +3024,7 @@ In enabled/stationary state, send a positionSet command of (2000um,
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Record any offset commands necessary to test before
+\textbf{Deviation}: Record any offset commands necessary to test before
 sending the move command.
 
 \medskip }
@@ -3032,7 +3032,7 @@ sending the move command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3048,7 +3048,7 @@ sending the move command.
 25 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the enabled/stationary state, send a pivot command of (0,0,0).
+In the enabled/stationary state, send a pivot command of (0,0,0).
 
 \medskip }
 \end{minipage}
@@ -3057,7 +3057,7 @@ sending the move command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The actuator positions do not change but the hexapod position changes.
+The actuator positions do not change but the hexapod position changes.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3073,7 +3073,7 @@ sending the move command.
 26 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the enabled/stationary state, send a positionSet command of (2000um,
+In the enabled/stationary state, send a positionSet command of (2000um,
 -3500um, 200um, 0.01deg, -0.05deg, 0.002deg)
 
 \medskip }
@@ -3082,7 +3082,7 @@ sending the move command.
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation}: Record any offset commands necessary to test before
+\textbf{Deviation}: Record any offset commands necessary to test before
 sending the move command.
 
 \medskip }
@@ -3090,7 +3090,7 @@ sending the move command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3106,7 +3106,7 @@ sending the move command.
 27 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -3115,7 +3115,7 @@ sending the move command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- Confirm the hexapod moves to the commanded position and the actuators
+Confirm the hexapod moves to the commanded position and the actuators
 change position to account for the new pivot point.
 
 \medskip }
@@ -3132,7 +3132,7 @@ change position to account for the new pivot point.
 28 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{{CONFIGURE LIMITS TEST}}\\
+\textbf{{CONFIGURE LIMITS TEST}}\\
 \textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#6 - configureLimits Command}\\
@@ -3146,7 +3146,7 @@ In enabled/stationary state, send a configureLimits command of (12000um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is rejected for being outside acceptable limits.
+The command is rejected for being outside acceptable limits.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3162,7 +3162,7 @@ In enabled/stationary state, send a configureLimits command of (12000um,
 29 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a configureLimits command of (1000um,
+In enabled/stationary state, send a configureLimits command of (1000um,
 -1000um, 1000um, 0.1, -0.1, 0.05)
 
 \medskip }
@@ -3172,7 +3172,7 @@ In enabled/stationary state, send a configureLimits command of (12000um,
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted.
+The command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3188,7 +3188,7 @@ In enabled/stationary state, send a configureLimits command of (12000um,
 30 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (850um, 0um,
+In enabled/stationary state, send a positionSet command of (850um, 0um,
 500um, 0deg, 0deg, 0deg)
 
 \medskip }
@@ -3197,7 +3197,7 @@ In enabled/stationary state, send a configureLimits command of (12000um,
 
  & Test Data \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- \textbf{Deviation:~}This command can be any valid positionSet command
+\textbf{Deviation:~}This command can be any valid positionSet command
 within the newly configured limits.
 
 \medskip }
@@ -3205,7 +3205,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted.
+The command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3221,7 +3221,7 @@ within the newly configured limits.
 31 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (1200um, 0um,
+In enabled/stationary state, send a positionSet command of (1200um, 0um,
 200um, 0deg, 0deg, 0deg)
 
 \medskip }
@@ -3231,7 +3231,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is rejected for being outside of range limits
+The command is rejected for being outside of range limits
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3247,7 +3247,7 @@ within the newly configured limits.
 32 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -3256,7 +3256,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The Hexapod doesn't move.
+The Hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3272,7 +3272,7 @@ within the newly configured limits.
 33 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (990um,
+In enabled/stationary state, send a positionSet command of (990um,
 990um, 200um, 0deg, 0deg, 0deg)
 
 \medskip }
@@ -3282,7 +3282,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is rejected for being outside of range limits.
+The command is rejected for being outside of range limits.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3298,7 +3298,7 @@ within the newly configured limits.
 34 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (500um,
+In enabled/stationary state, send a positionSet command of (500um,
 500um, 200um, 0deg, 0.1 deg, 0.01deg)
 
 \medskip }
@@ -3308,7 +3308,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted.
+The command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3324,7 +3324,7 @@ within the newly configured limits.
 35 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -3333,7 +3333,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The previously accepted command is executed.
+The previously accepted command is executed.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3349,7 +3349,7 @@ within the newly configured limits.
 36 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the DDS events that were generated.
+Record the DDS events that were generated.
 
 \medskip }
 \end{minipage}
@@ -3358,7 +3358,7 @@ within the newly configured limits.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The change is reflected in the settingsApplied event and the EUI.
+The change is reflected in the settingsApplied event and the EUI.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3374,7 +3374,7 @@ within the newly configured limits.
 37 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- {\textbf{CONFIGURE ACCELERATION TEST}}\\
+{\textbf{CONFIGURE ACCELERATION TEST}}\\
 \textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#7 - configureAcceleration Command}\\
@@ -3389,7 +3389,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3405,7 +3405,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 38 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.
+Send a move command.
 
 \medskip }
 \end{minipage}
@@ -3414,7 +3414,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The move takes approximately 9 seconds to complete.
+The move takes approximately 9 seconds to complete.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3430,7 +3430,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 39 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a configureAcceleration command of 1000.
+Send a configureAcceleration command of 1000.
 
 \medskip }
 \end{minipage}
@@ -3439,7 +3439,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- ~Confirm command is rejected for being outside of acceptable limits.
+~Confirm command is rejected for being outside of acceptable limits.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3455,7 +3455,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 40 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a configureAcceleration command of 100.
+Send a configureAcceleration command of 100.
 
 \medskip }
 \end{minipage}
@@ -3464,7 +3464,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted.~
+The command is accepted.~
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3480,7 +3480,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 41 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a postionSet command of (0um, 0um,
+In enabled/stationary state, send a postionSet command of (0um, 0um,
 0um, 0 deg, 0 deg, 0 deg, s).
 
 \medskip }
@@ -3490,7 +3490,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The hexapod doesn't move.
+The hexapod doesn't move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3506,7 +3506,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 42 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.~
+Send a move command.~
 
 \medskip }
 \end{minipage}
@@ -3515,7 +3515,7 @@ positionSet command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- It takes approximately 13 seconds to complete the commanded move with
+It takes approximately 13 seconds to complete the commanded move with
 the reduced acceleration value.
 
 \medskip }
@@ -3532,7 +3532,7 @@ the reduced acceleration value.
 43 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a configureAcceleration command of 500 to return the acceleration
+Send a configureAcceleration command of 500 to return the acceleration
 limit to its nominal value.
 
 \medskip }
@@ -3542,7 +3542,7 @@ limit to its nominal value.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted.
+The command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3558,7 +3558,7 @@ limit to its nominal value.
 44 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the corresponding DDS events that were generated.
+Record the corresponding DDS events that were generated.
 
 \medskip }
 \end{minipage}
@@ -3567,7 +3567,7 @@ limit to its nominal value.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The change is reflected in the settingsApplied event and the EUI.
+The change is reflected in the settingsApplied event and the EUI.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3583,7 +3583,7 @@ limit to its nominal value.
 45 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{{CONFIGURE VELOCITY TEST}}\\
+\textbf{{CONFIGURE VELOCITY TEST}}\\
 \textbf{Section 3.1.2 of the attached Software Acceptance Test
 Procedure\\
 Test Sequence \#8 - configureVelocity Command}\\
@@ -3597,7 +3597,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- This command is rejected for being outside of acceptable limits.
+This command is rejected for being outside of acceptable limits.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3613,7 +3613,7 @@ configureVelocity command of (10000, .01, 100, .01).
 46 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a configureVelocity command of (100,
+In enabled/stationary state, send a configureVelocity command of (100,
 .01, 200, .01).~
 
 \medskip }
@@ -3623,7 +3623,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- This command is accepted.
+This command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3639,7 +3639,7 @@ configureVelocity command of (10000, .01, 100, .01).
 47 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a positionSet command of (0, 0um,
+In enabled/stationary state, send a positionSet command of (0, 0um,
 2000um, 0 deg, 0 deg, 0 deg, s).
 
 \medskip }
@@ -3649,7 +3649,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The command is accepted
+The command is accepted
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3665,7 +3665,7 @@ configureVelocity command of (10000, .01, 100, .01).
 48 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.~
+Send a move command.~
 
 \medskip }
 \end{minipage}
@@ -3674,7 +3674,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- It takes approximately 20 seconds to complete the commanded move.
+It takes approximately 20 seconds to complete the commanded move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3690,7 +3690,7 @@ configureVelocity command of (10000, .01, 100, .01).
 49 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send a configureVelocity command of (100,
+In enabled/stationary state, send a configureVelocity command of (100,
 .01, 100, .01).~
 
 \medskip }
@@ -3700,7 +3700,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- This command is accepted.
+This command is accepted.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3716,7 +3716,7 @@ configureVelocity command of (10000, .01, 100, .01).
 50 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In enabled/stationary state, send an offset command of (0, 0um, 2000um,
+In enabled/stationary state, send an offset command of (0, 0um, 2000um,
 0 deg, 0 deg, 0 deg).
 
 \medskip }
@@ -3726,7 +3726,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- This command is accepted
+This command is accepted
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3742,7 +3742,7 @@ configureVelocity command of (10000, .01, 100, .01).
 51 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Send a move command.~
+Send a move command.~
 
 \medskip }
 \end{minipage}
@@ -3751,7 +3751,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- It takes approximately 40 seconds to complete the commanded move.
+It takes approximately 40 seconds to complete the commanded move.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3767,7 +3767,7 @@ configureVelocity command of (10000, .01, 100, .01).
 52 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Record the corresponding DDS events that were generated:
+Record the corresponding DDS events that were generated:
 
 \medskip }
 \end{minipage}
@@ -3776,7 +3776,7 @@ configureVelocity command of (10000, .01, 100, .01).
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The change is reflected in the settingsApplied event and the EUI.
+The change is reflected in the settingsApplied event and the EUI.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3792,7 +3792,7 @@ configureVelocity command of (10000, .01, 100, .01).
 53 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 3.3.2 of the attached Software Acceptance Test Procedure
+\textbf{Section 3.3.2 of the attached Software Acceptance Test Procedure
 Hexapod Action on State Commands}\\
 In the Offline/PublishOnly state, send all commands
 
@@ -3803,7 +3803,7 @@ In the Offline/PublishOnly state, send all commands
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no change and command is rejected.
+There is no change and command is rejected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3819,7 +3819,7 @@ In the Offline/PublishOnly state, send all commands
 54 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Offline/Available state, send an enterControl command
+In the Offline/Available state, send an enterControl command
 
 \medskip }
 \end{minipage}
@@ -3828,7 +3828,7 @@ In the Offline/PublishOnly state, send all commands
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system enters the Standby state.
+The system enters the Standby state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3844,7 +3844,7 @@ In the Offline/PublishOnly state, send all commands
 55 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Standby state, send any command except start or exitControl
+In the Standby state, send any command except start or exitControl
 
 \medskip }
 \end{minipage}
@@ -3853,7 +3853,7 @@ In the Offline/PublishOnly state, send all commands
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no change and command is rejected.
+There is no change and command is rejected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3869,7 +3869,7 @@ In the Offline/PublishOnly state, send all commands
 56 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Standby state, send an exitControl command.
+In the Standby state, send an exitControl command.
 
 \medskip }
 \end{minipage}
@@ -3878,7 +3878,7 @@ In the Offline/PublishOnly state, send all commands
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Offline/Available state.
+The system transitions into the Offline/Available state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3894,7 +3894,7 @@ In the Offline/PublishOnly state, send all commands
 57 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Standby state, send a start command.
+In the Standby state, send a start command.
 
 \medskip }
 \end{minipage}
@@ -3903,7 +3903,7 @@ In the Offline/PublishOnly state, send all commands
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Disabled state.
+The system transitions into the Disabled state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3919,7 +3919,7 @@ In the Offline/PublishOnly state, send all commands
 58 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Disabled state, send any command except for the enabled or
+In the Disabled state, send any command except for the enabled or
 standby command.
 
 \medskip }
@@ -3929,7 +3929,7 @@ standby command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no change and the command is rejected.
+There is no change and the command is rejected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3945,7 +3945,7 @@ standby command.
 59 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Disabled state, send the standby command.
+In the Disabled state, send the standby command.
 
 \medskip }
 \end{minipage}
@@ -3954,7 +3954,7 @@ standby command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Standby state.
+The system transitions into the Standby state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3970,7 +3970,7 @@ standby command.
 60 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Disabled state, send the enable command.
+In the Disabled state, send the enable command.
 
 \medskip }
 \end{minipage}
@@ -3979,7 +3979,7 @@ standby command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Enabled/Stationary state.
+The system transitions into the Enabled/Stationary state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -3995,7 +3995,7 @@ standby command.
 61 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Enabled/Stationary state, send either the enterControl command,
+In the Enabled/Stationary state, send either the enterControl command,
 exitControl command, start command, clearError command, or enable
 command.
 
@@ -4006,7 +4006,7 @@ command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no change and command is rejected.
+There is no change and command is rejected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -4022,7 +4022,7 @@ command.
 62 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Enabled/Stationary state, send a disable command.
+In the Enabled/Stationary state, send a disable command.
 
 \medskip }
 \end{minipage}
@@ -4031,7 +4031,7 @@ command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into Disabled state.
+The system transitions into Disabled state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -4047,7 +4047,7 @@ command.
 63 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Fault state, send any command except the clearError command.
+In the Fault state, send any command except the clearError command.
 
 \medskip }
 \end{minipage}
@@ -4056,7 +4056,7 @@ command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- There is no change and command is rejected.
+There is no change and command is rejected.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -4072,7 +4072,7 @@ command.
 64 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Fault state, send the clearError command.
+In the Fault state, send the clearError command.
 
 \medskip }
 \end{minipage}
@@ -4081,7 +4081,7 @@ command.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- The system transitions into the Offline/PublishOnly state.
+The system transitions into the Offline/PublishOnly state.
 
 \medskip }
 \end{minipage} \\ \cdashline{2-2}
@@ -4097,7 +4097,7 @@ command.
 65 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- \textbf{Section 4 of the attached Software Acceptance Test Procedure}\\
+\textbf{Section 4 of the attached Software Acceptance Test Procedure}\\
 In the Enabled/Stationary state, unplug a motor encoder cable for one of
 the actuators.\textbf{}\\
 
@@ -4108,7 +4108,7 @@ the actuators.\textbf{}\\
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Drive Fault error event is created and the system transitions to Fault
+A Drive Fault error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -4125,7 +4125,7 @@ state.
 66 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- In the Enabled/Stationary state, unplug a linear encoder cable for one
+In the Enabled/Stationary state, unplug a linear encoder cable for one
 of the actuators.
 
 \medskip }
@@ -4135,7 +4135,7 @@ of the actuators.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Drive Fault error event is created and the system transitions to Fault
+A Drive Fault error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -4152,7 +4152,7 @@ state.
 67 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Unplug a motor power cable from one of the actuators and command a
+Unplug a motor power cable from one of the actuators and command a
 PositionSet/Move.
 
 \medskip }
@@ -4162,7 +4162,7 @@ PositionSet/Move.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Following Error event is created and the system transitions to Fault
+A Following Error event is created and the system transitions to Fault
 state.
 
 \medskip }
@@ -4179,7 +4179,7 @@ state.
 68 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Activate an extension limit switch on one of the actuators by removing
+Activate an extension limit switch on one of the actuators by removing
 the limit switch cover and manually tripping.
 
 \medskip }
@@ -4189,7 +4189,7 @@ the limit switch cover and manually tripping.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- An Extended Limit Switch error event is created and the system
+An Extended Limit Switch error event is created and the system
 transitions into Fault state.
 
 \medskip }
@@ -4206,7 +4206,7 @@ transitions into Fault state.
 69 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Activate a retraction limit switch on one of the actuators by removing
+Activate a retraction limit switch on one of the actuators by removing
 the limit switch cover and manually tripping.
 
 \medskip }
@@ -4216,7 +4216,7 @@ the limit switch cover and manually tripping.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- A Retracted Limit Switch error event is created and the system
+A Retracted Limit Switch error event is created and the system
 transitions into Fault state.
 
 \medskip }
@@ -4233,7 +4233,7 @@ transitions into Fault state.
 70 & Description \\
  & \begin{minipage}[t]{15cm}
 {\footnotesize
- Unplug the Ethercat cable between the control PC and the first Copley
+Unplug the Ethercat cable between the control PC and the first Copley
 XE2 drive.
 
 \medskip }
@@ -4243,7 +4243,7 @@ XE2 drive.
 
  & Expected Result \\
  & \begin{minipage}[t]{15cm}{\footnotesize
- An Ethercat Lost event is created and the system transitions to Fault
+An Ethercat Lost event is created and the system transitions to Fault
 state.
 
 \medskip }
