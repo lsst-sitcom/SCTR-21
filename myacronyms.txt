@@ -1,0 +1,3 @@
+SAL:Service Abstraction Layer
+SMR:Spherically Mounted Retroreflector
+FRACAS:Failure Reporting Analysis and Corrective Action System
