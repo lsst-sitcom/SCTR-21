@@ -1,0 +1,3 @@
+#!/bin/bash
+docsteady --version
+docsteady --namespace pse generate-tpr LVV-P68 SCTR-21.tex

@@ -1,11 +1,21 @@
+% generated from JIRA project LVV
+% using template at /usr/local/lib/python3.7/site-packages/docsteady/templates/se-tpr.latex.jinja2.
+% using docsteady version 1.2rc24
+% Please do not edit -- update information in Jira instead
+
 \documentclass[SE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
 \usepackage{arydshln}
+\usepackage{attachfile}
+\usepackage{array}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \input meta.tex
 
+\newcommand{\attachmentsUrl}{https://github.com/\gitorg/\lsstDocType-\lsstDocNum/blob/\gitref/attachments}
 \providecommand{\tightlist}{
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
@@ -13,23 +23,23 @@
 
 \begin{document}
 
-\def\milestoneName{M2 Hexapod Functional Re-Verification And Integration With Sal}
-\def\milestoneId{LVV-P68}
+\def\milestoneName{M2 Hexapod Functional Re-verification and Integration with SAL}
+\def\milestoneId{}
 \def\product{SIT-COM Integration}
 
 \setDocCompact{true}
 
-\title{ LVV-P68 M2 Hexapod Functional Re-Verification And Integration With Sal Test Plan and Report}
+\title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
 \date{\vcsdate}
-\setDocUpstreamLocation{\url{https://github.com/lsst/lsst-texmf/examples}}
 \author{ Kevin Siruno }
 
-\input history_and_info.tex
+\input{history_and_info.tex}
 
 
 \setDocAbstract{
-This is the test plan and report for LVV-P68 (M2 Hexapod Functional Re-Verification And Integration With Sal),
+This is the test plan and report for
+\textbf{ M2 Hexapod Functional Re-verification and Integration with SAL},
 an LSST milestone pertaining to the System Engineering Subsystem.
 }
 
@@ -64,7 +74,6 @@ the test campaign by the vendor at the vendors facility and accepted by
 LSST during the Factory Acceptance Test review.
 
 
-
 \subsection{System Overview}
 \label{sect:systemoverview}
 
@@ -80,28 +89,35 @@ procedures.~
 \subsection{Document Overview}
 \label{sect:docoverview}
 
-This document was generated from Jira, obtaining the relevant information from the 
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testPlan/LVV-P68}{LVV-P68}
+This document was generated from Jira, obtaining the relevant information from the
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68}
 ~Jira Test Plan and related Test Cycles (
-  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCycle/LVV-C147}{LVV-C147}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}
 ).
 
-Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}), the applicable documentation, and explains how this document is organized.
-Section \ref{sect:configuration}  describes the configuration used for this test.
-Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
-%Section \ref{sect:plannedtestactivities} provides the list of planned test cycles and test cases, including all relevant information that fully describes the test campaign.
 
-Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary}, an overall assessment statement and suggestions for possible improvements.
+Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
+the applicable documentation, and explains how this document is organized.
+Section \ref{sect:testplan} provides additional information about the test plan, like for example the configuration
+used for this test or related documentation.
+Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
+
+Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary},
+an overall assessment statement and suggestions for possible improvements.
 Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
 
-The current status of test plan LVV-P68 in Jira is \textbf{ Approved }.
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68} in Jira is \textbf{ Approved }.
 
 \subsection{References}
 \label{sect:references}
 \renewcommand{\refname}{}
 \bibliography{lsst,refs,books,refs_ads,local}
-\section{Test Configuration}
-\label{sect:configuration}
+
+
+\newpage
+\section{Test Plan Details}
+\label{sect:testplan}
+
 
 \subsection{Data Collection}
 
@@ -166,6 +182,19 @@ criteria must be met:
 \end{itemize}
 
 
+\subsection{Related Documentation}
+
+
+No additional documentation provided.
+
+\subsection{PMCS Activity}
+
+Primavera milestones related to the test campaign:
+\begin{itemize}
+\item None
+\end{itemize}
+
+
 \newpage
 \section{Personnel}
 \label{sect:personnel}
@@ -175,14 +204,13 @@ The personnel involved in the test campaign is shown in the following table.
 {\small
 \begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
 \hline
-\multicolumn{2}{r}{Test Plan (LVV-P68) owner:} &
+\multicolumn{2}{r}{T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68} owner:} &
 \multicolumn{2}{l}{\textbf{ Kevin Siruno } }\\\hline
-\multicolumn{2}{r}{ LVV-C147 owner:} &
+\multicolumn{2}{r}{T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147} owner:} &
 \multicolumn{2}{l}{\textbf{
-    Undefined
-}
+Undefined }
 } \\\hline
-\textbf{Test Case} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 & {\small Kevin Siruno } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -224,9 +252,11 @@ Roberto Tighe }
 {\small
 \begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
 \toprule
-\multicolumn{4}{p{13.5cm}}{ Test Plan {\bf LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL }} & Approved \\\hline
-\multicolumn{4}{p{13.5cm}}{ Test Cycle {\bf LVV-C147: M2 Hexapod Re-verification and Integration Testing }} & Not Executed \\\hline
-\textbf{test case} & \textbf{Ver.} & \textbf{status} & \textbf{comment} & \textbf{issues} \\\toprule
+\multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Functional Re-verification and Integration with SAL }} & Approved \\\hline
+\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification and Integration Testing }} & Not Executed \\\hline
+\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 &  1
 & Not Executed &
@@ -235,8 +265,7 @@ Roberto Tighe }
 
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{LVV-T1800}
 &  1
 & Not Executed &
@@ -245,8 +274,7 @@ Roberto Tighe }
 
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
 &  1
 & Not Executed &
@@ -255,8 +283,7 @@ Roberto Tighe }
 
 \medskip
 \end{minipage}
-&
-\\\hline
+&   \\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -280,7 +307,7 @@ Not yet available.
 
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification and Integration Testing}} in Jira.
 
-M2 Hexapod Re-verification and Integration Testing\\
+Test Cycle name: M2 Hexapod Re-verification and Integration Testing\\
 Status: Not Executed
 
 Re-verify the hardware and software for the M2 Hexapod that was
