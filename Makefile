@@ -2,6 +2,8 @@ DOCTYPE = SCTR
 DOCNUMBER =21
 DOCNAME = $(DOCTYPE)-$(DOCNUMBER)
 JOBNAME = $(DOCNAME)
+NAMESPACE = PSE
+PLAN = LVV-P68
 TEX = $(filter-out $(wildcard *acronyms.tex) , $(wildcard *.tex))
 
 export TEXMFHOME ?= lsst-texmf/texmf
@@ -43,6 +45,9 @@ myacronyms.txt :
 
 skipacronyms.txt :
 	touch skipacronyms.txt
+
+generate: .FORCE
+	docsteady --namespace $(NAMESPACE) generate-tpr $(PLAN) $(DOCNAME).tex
 
 clean :
 	rm *.pdf *.nav *.bbl *.xdv *.snm
