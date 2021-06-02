@@ -33,6 +33,7 @@ meta.tex: Makefile .FORCE
 	/bin/echo '\newcommand{\lsstDocNum}{$(DOCNUMBER)}' >>$@
 	/bin/echo '\newcommand{\vcsrevision}{$(GITVERSION)$(GITDIRTY)}' >>$@
 	/bin/echo '\newcommand{\vcsdate}{$(GITDATE)}' >>$@
+	/bin/echo '\newcommand{\vcsDate}{$(GITDATE)}' >>$@
 
 
 #Traditional acronyms are better in this document
