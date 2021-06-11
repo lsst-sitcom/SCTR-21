@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-06-01 }
+\date{ 2021-06-11 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -262,7 +262,7 @@ Holger Drass }
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 &  1
-& Pass w/ Deviation &
+& Initial Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -277,7 +277,11 @@ Holger Drass }
 
 \medskip
 \end{minipage}
-&   \\\hline
+&   \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
+\href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
+\href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
+\href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
+\\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
 &  1
 & Fail &
@@ -286,7 +290,15 @@ Holger Drass }
 
 \medskip
 \end{minipage}
-&   \\\hline
+&   \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
+\\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -396,7 +408,7 @@ completed:
   \end{itemize}
 \end{itemize}
 
-Execution status: {\bf Pass w/ Deviation }
+Execution status: {\bf Initial Pass }
 
 Final comment:\\
 
@@ -1710,6 +1722,14 @@ Execution status: {\bf Fail }
 
 Final comment:\\
 
+Issues found during the execution of LVV-T1800 test case:
+
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}~~M2 Hexapod absolute XYZ value accuracy not reached
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}~~M2 Hexapod absolute XYZ value accuracy not reached
+
+\end{itemize}
 
 Detailed steps results:
 
@@ -1966,6 +1986,14 @@ Feb2021\_Results\_updateRT27042021\_comment\_hd column AB and AC from
 line 34 on.
 
 }
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}~~M2 Hexapod absolute XYZ value accuracy not reached
+
+\end{itemize}
+}
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
 Step 10 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
@@ -2209,6 +2237,14 @@ See lines 140-150, M2 hexapod\_the test moves\_02-25
 Feb2021\_Results\_updateRT27042021\_comment\_hd
 
 }
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}~~M2 Hexapod absolute XYZ value accuracy not reached
+
+\end{itemize}
+}
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
 Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
@@ -2374,6 +2410,18 @@ Execution status: {\bf Fail }
 
 Final comment:\\
 
+Issues found during the execution of LVV-T1802 test case:
+
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\end{itemize}
 
 Detailed steps results:
 
@@ -2809,6 +2857,14 @@ Record the corresponding DDS events that were generated.
 \end{itemize}
 
 }
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\end{itemize}
+}
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
 Step 16 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
@@ -3011,6 +3067,14 @@ hex position
 
 ~
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
@@ -3345,6 +3409,14 @@ In this substate, no move command can be received?
   setCompensationMode=False command.
 \end{itemize}
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
@@ -3750,6 +3822,14 @@ Record the corresponding DDS events that were generated.
   {Fail:~}The ~inPosition events were not generated.
 \end{itemize}
 
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Issues found executing this step:  \\
+{\footnotesize
+\begin{itemize}
+\item \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}~~M2 Hexapod SAL verification failures
+
+\end{itemize}
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
