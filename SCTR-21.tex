@@ -1,6 +1,6 @@
 % generated from JIRA project LVV
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpr.latex.jinja2.
-% using docsteady version 2.2.2
+% using docsteady version 2.2.4
 % Please do not edit -- update information in Jira instead
 \documentclass[PSE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-06-11 }
+\date{ 2021-11-12 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -84,7 +84,7 @@ Assembly of the TMA. Although the mass of the M2 mirror cell assembly is
 greater than the camera, the actuators of the M2 hexapod are identical
 to the Camera Hexapod's actuators. For this reason, the M2 Hexapod and
 Camera hexapod have the same operator's manual and similar test
-procedures.~
+procedures.Â~
 
 
 \subsection{Document Overview}
@@ -283,7 +283,7 @@ Holger Drass }
 \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
 \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
-&  1
+&  2
 & Fail &
 \begin{minipage}[]{9cm}
 \smallskip
@@ -307,12 +307,62 @@ Holger Drass }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+\begin{itemize}
+\tightlist
+\item
+  During the February 2020 verification, the M2 hexapod software was
+  still under development at its various levels. (see
+  https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1804)
+\item
+  During the February 2020 verification, the M2 hexapod presented random
+  faults in Drive 0 (see https://jira.lsstcorp.org/browse/FRACAS-53)
+\item
+  The M2 hexapod needed to be installed at the TMA. Therefore some of
+  the tests could not be executed.
+\item
+  Some hardware tests on the accuracy using the laser tracker failed.
+  (see https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1800)
+\item
+  Some of the CSC tests failed (see
+  https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1802)
+\item
+\end{itemize}
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+\begin{itemize}
+\tightlist
+\item
+  The low-level controller, the EUI, and the CSC should be updated to
+  the latest versions.
+\item
+  Clean the actuator similar to the Camera hexapod actuators and
+  reassess the MOOG tests 3.5.12 and 3.5.24 to see if the requirements
+  are met afterward.
+\item
+  The cables for the M2 hexapod should be updated similar to the camera
+  hexapod and the 32 MOOG test moves (3.5.12) and the endurance test
+  should be executed.
+\item
+  FRACAS-53 (https://jira.lsstcorp.org/browse/FRACAS-53) should be
+  closed out.
+\item
+  Enough time should be allocated to test the EUI commands and the rest
+  of the hardware tests.
+\item
+  The software tests for the EUI should be executed when the state
+  machine is updated to standbyState-entry state machine. The test case
+  should be updated to account for state machine tests.
+\item
+  The software tests for the CSC should be executed again to account for
+  the changes done to the CSC.
+\item
+  The configuration part of the test cases should be updated to account
+  for the change in accordance with \citeds{LSE-209}.
+\item
+  The configuration handling should be tested.
+\end{itemize}
 
 \newpage
 \section{Detailed Test Results}
@@ -1128,8 +1178,8 @@ The hexapod doesn't move.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-Commands not due to time constraints not further tested in for the EUI.
-See the tests in LVV-T1802 ``Integration of M2 Hexapod with SAL''.
+~Due to time constraints, commands were not tested from the EUI. See the
+tests in LVV-T1802 ``Integration of M2 Hexapod with SAL''.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2339,7 +2389,7 @@ There is no cross-talk observed.~
 
 \paragraph{ LVV-T1802 - Integration of M2 Hexapod with SAL }\mbox{}\\
 
-Version \textbf{1}.
+Version \textbf{2}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{\textit{ LVV-T1802 } }
 test case in Jira.
 
@@ -5046,7 +5096,7 @@ not tested
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 89 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 89 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5073,7 +5123,7 @@ transitions into Fault state.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 90 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 90 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
