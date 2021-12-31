@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-11-12 }
+\date{ 2021-12-31 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -84,7 +84,7 @@ Assembly of the TMA. Although the mass of the M2 mirror cell assembly is
 greater than the camera, the actuators of the M2 hexapod are identical
 to the Camera Hexapod's actuators. For this reason, the M2 Hexapod and
 Camera hexapod have the same operator's manual and similar test
-procedures.Â~
+procedures.~
 
 
 \subsection{Document Overview}
@@ -307,62 +307,97 @@ Holger Drass }
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-\begin{itemize}
-\tightlist
-\item
-  During the February 2020 verification, the M2 hexapod software was
-  still under development at its various levels. (see
-  https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1804)
-\item
-  During the February 2020 verification, the M2 hexapod presented random
-  faults in Drive 0 (see https://jira.lsstcorp.org/browse/FRACAS-53)
-\item
-  The M2 hexapod needed to be installed at the TMA. Therefore some of
-  the tests could not be executed.
-\item
-  Some hardware tests on the accuracy using the laser tracker failed.
-  (see https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1800)
-\item
-  Some of the CSC tests failed (see
-  https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1802)
-\item
-\end{itemize}
+During the February 2020 verification, the M2 hexapod was still on level
+three, and the M2 hexapod software components low-level controller, EUI,
+and CSC were still under development.\\
+Since the hexapod has been received from the vendor the sets of commands
+for the EUI and the CSC have diverged. The ``positionSet'' command is
+only supported by the EUI and is retired for the CSC. At the CSC level,
+this functionality is now included directly in the commands to move the
+hexapod. Other commands were either modified themselves or their payload
+has changed. For an up-to-date list of all supported commands and their
+permitted payloads see
+\href{https://ts-xml.lsst.io/sal_interfaces/MTHexapod.html}{MT Hexapod
+Sal interfaces}.\\
+Some events were not created in the EFD as expected. In detail, the
+``inPosition'' and ``controlledStop'' events were not generated in the
+EFD. The ``compensationMode'' was not activating correctly and not
+reported to the EFD as expected. For details see the
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E1028}{Execution
+of test case LVV-T1804} and the
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E1021}{execution
+of test case LVV-T1802}).\\
+Apart from this, the CSC is going to be updated to a standbyState-entry
+state machine. This implies that the start-up procedure will change.
+Various other changes were necessary to keep up with the development of
+the SAL/DDS itself and to accommodate changes in the network
+infrastructure of the observatory.\\
+All of these changes have been tested with positive results using the
+camera hexapod since the M2 hexapod was lifted on top of the TMA and is
+not accessible for a long time.\\[2\baselineskip]On the hardware side,
+the M2 hexapod presented random faults in Drive 0 and Drive 1. The
+failure is randomly happening over a time range between a few minutes
+and at least 11 hours. The fault appears in the EFD and on the EUI. On
+the EUI the fault is presented as ``Feedback Error Drive0''. A detailed
+investigation on this issue was performed by first switching the cables
+to a different actuator and later by changing the actuator itself. Both
+attempts are excluding that an actuator as the source of failure but did
+not solve the problem (for details see
+\href{https://jira.lsstcorp.org/browse/FRACAS-53}{FRACAS-53}). This
+issue was also observed on the camera hexapod and was solved by changing
+the cables to the actuators.\\
+The second hardware-related issue concerns the requirements
+\href{https://jira.lsstcorp.org/browse/LVV-18622}{LTS-206-REQ-0164-V-02:
+3.5.12\_1 Positioning - LSST Re-verification} and
+\href{https://jira.lsstcorp.org/browse/LVV-18631}{LTS-206-REQ-0178-V-02:
+3.5.24\_1 Hexapod Absolute Accuracy - LSST Re-verification}. Tests on
+the positioning in X,Y,Z translation combined with a rotation failed to
+reach the required precision. The same issue was observed for the
+hexapod's absolute accuracy. The reasons are lying most likely in the
+measurement setup itself. The laser tracker measurements are at the
+limit of the laser tracker's precision and the Mitutoyo gauges mounts
+were a preliminary solution. Testing the camera hexapod with an improved
+Mitutoyo setup has shown that the same requirements are fulfilled for
+the camera hexapod. The hardware tests are executed and documented as
+part of the
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E1022}{execution
+of test case LVV-T1800}.\\
+In addition, all the aforementioned tests and discoveries were done
+shortly before the M2 hexapod needed to be installed at the TMA.
+Therefore, some of the hardware tests could not be executed.
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-\begin{itemize}
-\tightlist
-\item
-  The low-level controller, the EUI, and the CSC should be updated to
-  the latest versions.
-\item
-  Clean the actuator similar to the Camera hexapod actuators and
-  reassess the MOOG tests 3.5.12 and 3.5.24 to see if the requirements
-  are met afterward.
-\item
-  The cables for the M2 hexapod should be updated similar to the camera
-  hexapod and the 32 MOOG test moves (3.5.12) and the endurance test
-  should be executed.
-\item
-  FRACAS-53 (https://jira.lsstcorp.org/browse/FRACAS-53) should be
-  closed out.
-\item
-  Enough time should be allocated to test the EUI commands and the rest
-  of the hardware tests.
-\item
-  The software tests for the EUI should be executed when the state
-  machine is updated to standbyState-entry state machine. The test case
-  should be updated to account for state machine tests.
-\item
-  The software tests for the CSC should be executed again to account for
-  the changes done to the CSC.
-\item
-  The configuration part of the test cases should be updated to account
-  for the change in accordance with \citeds{LSE-209}.
-\item
-  The configuration handling should be tested.
-\end{itemize}
+As a general comment, enough time should be allocated to test the EUI
+and CSC commands as well as to execute the rest of the hardware tests.\\
+To improve the situation before the next test cycle the recommendation
+is to update the M2 hexapod the low-level controller, the EUI, and the
+CSC to the latest versions. The software tests for the EUI should be
+executed when the state machine is updated to the standbyState-entry
+state machine. The test case should be updated to account for state
+machine tests.\\
+The configuration part of the test cases should be updated to account
+for the change in accordance with \citeds{LSE-209} and need to be tested for the
+first time.\\
+For the hardware aspects of the M2 hexapod, a new measurement setup that
+is similar to what was used for the camera hexapod should be used. With
+the new measurement setup in place, the failing tests should be repeated
+to confirm the positioning in X,Y,Z in combination with rotation and the
+hexapod's absolute accuracy are within their requirements
+(\href{https://jira.lsstcorp.org/browse/LVV-18622}{LTS-206-REQ-0164-V-02:
+3.5.12\_1 Positioning - LSST Re-verification} and
+\href{https://jira.lsstcorp.org/browse/LVV-18631}{LTS-206-REQ-0178-V-02:
+3.5.24\_1 Hexapod Absolute Accuracy - LSST Re-verification}). In case
+new faults are encountered, especially blind spots on the encoders,
+cleaning of the actuators similar to the camera hexapod actuators should
+be performed. To address the random fault in drive zero and to ensure
+that is not happening in another drive all the cables for the M2 hexapod
+should be updated similar to the camera hexapod and the 32 MOOG test
+moves (Moog test protocol paragraph 3.5.12), as well as the endurance
+test corresponding to one night of operation, should be executed. The
+\href{https://jira.lsstcorp.org/browse/FRACAS-53}{FRACAS-53} ticket
+should be closed out.
 
 \newpage
 \section{Detailed Test Results}
@@ -2233,7 +2268,7 @@ repeatability limitation.
   Actual Result \\
 {\footnotesize
 See page 7, M2 Hexapod verification-tests\_2021.check4:~ Hexapod
-repeatability testsâ\euro{}¦not done, no time~
+repeatability tests\ldots{}not done, no time~
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
