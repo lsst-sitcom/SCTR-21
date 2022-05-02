@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2021-12-31 }
+\date{ 2022-05-02 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -55,22 +55,36 @@ The most recent change to the document repository was on \vcsDate.
 \subsection{Objectives}
 \label{sect:objectives}
 
- The objective of this test plan is to re-verify the hardware and
-software functional requirements of the M2 hexapod without SAL, as well
-as verify the software functional requirements of the M2 hexapod
-integrated with SAL 4.0 or higher. This test campaign will exercise the
-functionality of the hardware and software that was executed previously
-and meets the following criteria:\\
+ The objective of this test plan is to re-verify
+
+\begin{itemize}
+\tightlist
+\item
+  the hardware and software functional requirements of the M2 hexapod
+  without SAL
+\item
+  the software functional requirements of the M2 hexapod integrated with
+  SAL 4.0 or higher.
+\end{itemize}
+
+This re-verification is done after shipment from the vendor's facility
+to the Summit, as defined in \citeds{LTS-206} and \citeds{LTS-160}.\\
+This test campaign will exercise the functionality of the hardware and
+software that was executed previously and meets the following criteria:
 
 \begin{itemize}
 \tightlist
 \item
   Requires a laser tracker, mechanical gauges, induction current probe,
   temperature sensors
+\item
+  Requires the vendor's EUI software and hardware via local control
+\item
+  Requires control via SAL 4.0 or higher
 \end{itemize}
 
 The hardware and software requirements were previously verified during
-the test campaign by the vendor at the vendors facility and accepted by
+the test campaign by the vendor at the vendor's facility and accepted by
 LSST during the Factory Acceptance Test review.
 
 
@@ -125,9 +139,10 @@ The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jsp
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
-  The M2 Hexapod will be verified on the 3rd floor of the Summit Facility
-on the TEA structure with the M2 mass surrogate installed and facing
-downwards. The TEA is mounted on its shipping mount.
+  The M2 Hexapod will be verified in a climate-controlled environment
+\textbf{on the 3rd floor of the Summit Facility} on the TEA structure
+with the M2 mass surrogate installed and facing downwards. The TEA is
+mounted on its shipping mount.
 
   \subsection{Entry Criteria}
   In order to test the M2 Hexapod functionality, the following criteria
@@ -139,7 +154,7 @@ must be met first:
   All the test setup for the Data Acquisition system must be completed
   and ready to record data for the laser tracker
 \item
-  The Laser tracker and 3 SMR's are installed and setup
+  The laser tracker and 3 SMRs are installed and setup
 \item
   All utilities and electrical connections are hooked up and allow the
   M2 Hexapod to be powered on and controlled
@@ -258,14 +273,15 @@ Holger Drass }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Functional Re-verification and Integration with SAL }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification and Integration Testing }} & Done \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 &  1
 & Initial Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The start-up procedure was executed in a different test case before and
+did not need to be executed again.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -274,7 +290,9 @@ Holger Drass }
 & Fail &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Since this execution, this (M2) hexapod was lifted to the TMA. ~In the
+meantime, the \textbf{camera~}hexapod software and hardware were
+extensively tested and improved.\\[2\baselineskip]
 \medskip
 \end{minipage}
 &   \href{https://jira.lsstcorp.org/browse/LVV-19511}{LVV-19511}
@@ -372,8 +390,8 @@ Therefore, some of the hardware tests could not be executed.
 As a general comment, enough time should be allocated to test the EUI
 and CSC commands as well as to execute the rest of the hardware tests.\\
 To improve the situation before the next test cycle the recommendation
-is to update the M2 hexapod the low-level controller, the EUI, and the
-CSC to the latest versions. The software tests for the EUI should be
+is to update the M2 hexapod low-level controller, the EUI, and the CSC
+to the latest versions. The software tests for the EUI should be
 executed when the state machine is updated to the standbyState-entry
 state machine. The test case should be updated to account for state
 machine tests.\\
@@ -405,9 +423,9 @@ should be closed out.
 
 \subsection{Test Cycle LVV-C147 }
 
-Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification and Integration Testing}} in Jira.
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification}} in Jira.
 
-Test Cycle name: M2 Hexapod Re-verification and Integration Testing\\
+Test Cycle name: M2 Hexapod Re-verification\\
 Status: Done
 
 Re-verify the hardware and software for the M2 Hexapod that was
@@ -445,7 +463,7 @@ was executed previously and meets the following criteria:
 \item
   Only requires the M2 hexapod to be operable
 \item
-  Only requires testing of the synchronous mode
+  Only requires testing the synchronous mode
 
   \begin{itemize}
   \tightlist
@@ -453,7 +471,7 @@ was executed previously and meets the following criteria:
     \textbf{Asynchronous mode is not a standard mode of operation}
   \end{itemize}
 \item
-  Only requires the vendors EUI software and hardware via local control
+  Only requires the vendor's EUI software and hardware via local control
 
   \begin{itemize}
   \tightlist
@@ -463,6 +481,9 @@ was executed previously and meets the following criteria:
 \item
   Does \textbf{NOT} require the M2 hexapod to be rotated to various
   elevation angles.
+\item
+  This test case can be executed with a simulated M2 mass or actual M2
+  hardware
 \end{itemize}
 
 The software functional requirements were previously verified during the
@@ -472,7 +493,7 @@ procedure used during the vendor's acceptance testing is the \emph{LSST
 Hexapods-Rotator Software Acceptance Test Procedure} which is attached
 to this test case. The test steps of this test case are taken directly
 from that document on how to perform the test in a similar way as was
-performed previously and includes changes noted by the
+performed previously and the test steps include changes noted by the
 vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
 Manual} for more information on how to operate the hexapod.
 
@@ -484,7 +505,7 @@ completed:
 \begin{itemize}
 \tightlist
 \item
-  The measurement equipment has been set-up for testing
+  The measurement equipment has been set up for testing
 
   \begin{itemize}
   \tightlist
@@ -495,14 +516,15 @@ completed:
 
 Execution status: {\bf Initial Pass }
 
-Final comment:\\
+Final comment:\\The start-up procedure was executed in a different test case before and
+did not need to be executed again.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -526,12 +548,18 @@ A prompt to enter the password is shown.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
+\textbf{Deviation:}
+
+\begin{itemize}
+\tightlist
+\item
+  Access is now through X2GO.
+\end{itemize}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -555,7 +583,17 @@ publish through SAL but cannot receive commands.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
+\textbf{Deviation:}
+
+\begin{itemize}
+\tightlist
+\item
+  Access is now through X2GO.
+\item
+  Use the command line to start the latest version of the EUI.
+\item
+  Starts in Offline State/PublishOnly.
+\end{itemize}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -582,7 +620,6 @@ eGUI.\\[2\baselineskip]
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -606,7 +643,6 @@ The State Triggers dialogue box shown below becomes visible.\\
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -629,7 +665,6 @@ display box at the top of the Main says Standby State.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -653,7 +688,6 @@ previous DDS start command.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -676,12 +710,11 @@ motor drives are enabled and and motion can be commanded.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 8 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -704,12 +737,11 @@ The system transitions back to the OfflineState/PublishOnly substate.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-See: LVV-E1022
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 9 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -896,7 +928,7 @@ The system transitions to Fault state.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 18 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 18 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1774,7 +1806,7 @@ procedure used during the vendor's acceptance testing is the \emph{LSST
 Hexapods-Rotator Acceptance Test Procedure} which is attached to this
 test case. The test steps of this test case are taken directly from that
 document on how to perform the test in a similar way as was performed
-previously and includes changes noted by the
+previously and the test steps include changes noted by the
 vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
 Manual} for more information on how to operate the hexapod.
 
@@ -1786,7 +1818,7 @@ completed:
 \begin{itemize}
 \tightlist
 \item
-  The measurement equipment has been set-up for testing
+  The measurement equipment has been set up for testing
 
   \begin{itemize}
   \tightlist
@@ -1805,7 +1837,9 @@ completed:
 
 Execution status: {\bf Fail }
 
-Final comment:\\
+Final comment:\\Since this execution, this (M2) hexapod was lifted to the TMA. ~In the
+meantime, the \textbf{camera~}hexapod software and hardware were
+extensively tested and improved.\\[2\baselineskip]
 
 Issues found during the execution of LVV-T1800 test case:
 
@@ -1820,7 +1854,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -1855,7 +1889,7 @@ A prompt to enter the password is shown.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2081,7 +2115,7 @@ line 34 on.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 10 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 10 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2775,7 +2809,7 @@ named lvv-t1802.ipynb
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 11 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 11 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
