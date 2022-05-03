@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-05-02 }
+\date{ 2022-05-03 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -139,10 +139,22 @@ The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jsp
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
+  This test plan is going to be executed in two verification environments:
+
+\begin{itemize}
+\tightlist
+\item
   The M2 Hexapod will be verified in a climate-controlled environment
-\textbf{on the 3rd floor of the Summit Facility} on the TEA structure
-with the M2 mass surrogate installed and facing downwards. The TEA is
-mounted on its shipping mount.
+  \textbf{on the 3rd floor of the Summit Facility} on the TEA structure
+  with \textbf{the M2 mass surrogate installed and facing downwards.}
+  The TEA is mounted on its shipping mount.
+\item
+  The M2 Hexapod will be verified \textbf{on the TMA in the Dome of the
+  Summit Facility} on the TEA structure with \textbf{the M2 mass
+  surrogate installed and following the elevation suggested in the
+  vendor's documentation.\\
+  }
+\end{itemize}
 
   \subsection{Entry Criteria}
   In order to test the M2 Hexapod functionality, the following criteria
@@ -175,7 +187,7 @@ criteria must be met:
   Raw test data, events, and telemetry have been saved for the M2
   Hexapod in the EFD.
 \item
-  All test data has been analyzed and post processed.
+  All test data has been analyzed and post-processed.
 \item
   All test steps have been statused in the Jira Test Cases within this
   Test Plan and actual results populated as required.
@@ -273,7 +285,7 @@ Holger Drass }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Functional Re-verification and Integration with SAL }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification }} & Done \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification on Level 3 }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
 &  1
@@ -325,6 +337,8 @@ extensively tested and improved.\\[2\baselineskip]
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
+\textbf{The following results are for the first
+test-cycle~\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}:}\\
 During the February 2020 verification, the M2 hexapod was still on level
 three, and the M2 hexapod software components low-level controller, EUI,
 and CSC were still under development.\\
@@ -344,7 +358,7 @@ reported to the EFD as expected. For details see the
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E1028}{Execution
 of test case LVV-T1804} and the
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlayer/testExecution/LVV-E1021}{execution
-of test case LVV-T1802}).\\
+of test case LVV-T1802}.\\
 Apart from this, the CSC is going to be updated to a standbyState-entry
 state machine. This implies that the start-up procedure will change.
 Various other changes were necessary to keep up with the development of
@@ -382,19 +396,23 @@ part of the
 of test case LVV-T1800}.\\
 In addition, all the aforementioned tests and discoveries were done
 shortly before the M2 hexapod needed to be installed at the TMA.
-Therefore, some of the hardware tests could not be executed.
+Therefore, some of the hardware tests could not be
+executed.\\[2\baselineskip]\textbf{The following results are for the
+second test cycle:}\\[3\baselineskip]
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
+\textbf{The following recommendations are derived from the first
+test-cycle}\\
 As a general comment, enough time should be allocated to test the EUI
 and CSC commands as well as to execute the rest of the hardware tests.\\
-To improve the situation before the next test cycle the recommendation
+To improve the situation before the tests on the TMA the recommendation
 is to update the M2 hexapod low-level controller, the EUI, and the CSC
-to the latest versions. The software tests for the EUI should be
-executed when the state machine is updated to the standbyState-entry
-state machine. The test case should be updated to account for state
-machine tests.\\
+to the latest versions.\\
+The software tests for the EUI should be executed when the state machine
+is updated to the standbyState-entry state machine. The test case should
+be updated to account for state machine tests.\\
 The configuration part of the test cases should be updated to account
 for the change in accordance with \citeds{LSE-209} and need to be tested for the
 first time.\\
@@ -415,7 +433,15 @@ should be updated similar to the camera hexapod and the 32 MOOG test
 moves (Moog test protocol paragraph 3.5.12), as well as the endurance
 test corresponding to one night of operation, should be executed. The
 \href{https://jira.lsstcorp.org/browse/FRACAS-53}{FRACAS-53} ticket
-should be closed out.
+should be closed out.\\[2\baselineskip]Test cases with an ``initial
+pass'' or ``fail'' need to be executed in the next test cycle. The test
+plan needs to be revised, and make a new test cycle with the M2 hexapod
+on the TMA. Update the test cases to include the updated software and
+updated wiring and the improved gauge measurement setup. All of the
+``Not executed'' steps need to be revised as required and executed
+because we did not have enough time to execute the
+tests.\\[2\baselineskip]\textbf{The following recommendations are
+derived from the second test-cycle:}
 
 \newpage
 \section{Detailed Test Results}
@@ -423,9 +449,9 @@ should be closed out.
 
 \subsection{Test Cycle LVV-C147 }
 
-Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification}} in Jira.
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C147}{M2 Hexapod Re-verification on Level 3}} in Jira.
 
-Test Cycle name: M2 Hexapod Re-verification\\
+Test Cycle name: M2 Hexapod Re-verification on Level 3\\
 Status: Done
 
 Re-verify the hardware and software for the M2 Hexapod that was
@@ -482,8 +508,8 @@ was executed previously and meets the following criteria:
   Does \textbf{NOT} require the M2 hexapod to be rotated to various
   elevation angles.
 \item
-  This test case can be executed with a simulated M2 mass or actual M2
-  hardware
+  This test case can be executed with a \textbf{simulated M2 mass or
+  actual M2 hardware}
 \end{itemize}
 
 The software functional requirements were previously verified during the
@@ -1110,7 +1136,9 @@ transitions into Fault state.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-Tested by Felipe
+Tested by Felipe. Upon manually triggering an actuator limit switch, an
+Extended Limit Switch error event is created and the system transitions
+into Fault state.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -1154,7 +1182,9 @@ transitions into Fault state.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-Tested by Felipe.
+Tested by Felipe. Upon manually triggering an actuator limit switch, an
+Retracted Limit Switch error event is created and the system transitions
+into Fault state.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2115,7 +2145,7 @@ line 34 on.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 10 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 10 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2176,7 +2206,9 @@ The center of rotation is able to be moved.
   Actual Result \\
 {\footnotesize
 initial pass. Details see page 6, M2 Hexapod
-verification-tests\_2021.check4
+verification-tests\_2021.check\\
+This was with the hexapod on level 3 in the ``zenith'' position. Test
+again with hexapod at 0 elevations.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
@@ -2479,7 +2511,7 @@ was executed previously and meets the following criteria:
   Only requires command through the CSC after the PXI real-time
   controller is switched from GUI mode to DDS mode
 \item
-  Only requires testing of the synchronous mode
+  Only requires testing the synchronous mode
 
   \begin{itemize}
   \tightlist
@@ -2487,12 +2519,12 @@ was executed previously and meets the following criteria:
     \textbf{Asynchronous mode is not a standard mode of operation}
   \end{itemize}
 \item
-  Does require the M2 hexapod temperature sensors be operating
+  Does require the M2 hexapod temperature sensors to be operating
 \item
   Does \textbf{NOT} require the M2 hexapod to be rotated to various
   elevation angles.
 \item
-  Does \textbf{NOT~}require the M2 hexapod be in a climate controlled
+  Does \textbf{NOT~}require the M2 hexapod to be in a climate-controlled
   environment
 \end{itemize}
 
@@ -2503,10 +2535,10 @@ procedure used during the vendor's acceptance testing is the \emph{LSST
 Hexapods-Rotator Software Acceptance Test Procedure} which is attached
 to this test case. The test steps of this test case are the same steps
 from the procedure for the testing of the Camera Hexapod. The order of
-the steps were changed to reflect the \emph{Proposal of Hexapod Test~on
-Dec. 2019~}Confluence page which can be found linked in the Traceability
-tab.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
-Manual} for more information on how to operate the hexapod.
+the steps was changed to reflect the \emph{Proposal of Hexapod Test~on
+the Dec. 2019~}Confluence page which can be found linked in the
+Traceability tab.\\[2\baselineskip]See the attached \emph{LSST Hexapod
+Operator's Manual} for more information on how to operate the hexapod.
 
 \textbf{ Preconditions}:\\
 Prior to the execution of this test case to re-verify the M2 Hexapod
@@ -2546,7 +2578,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2575,7 +2607,7 @@ See: LVV-E1022
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2836,7 +2868,7 @@ All telemetry defined in the script is being ingested into the EFD.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 12 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 12 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2869,7 +2901,7 @@ The hexapod does not move.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 13 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 13 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2986,7 +3018,7 @@ Record the corresponding DDS events that were generated.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 16 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 16 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3197,7 +3229,7 @@ hex position
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 22 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 22 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3539,7 +3571,7 @@ In this substate, no move command can be received?
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 28 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 28 & Step Execution Status: \textbf{ Fail } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3681,7 +3713,7 @@ No tested
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 30 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 30 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -3880,7 +3912,7 @@ Send a move command.~
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 35 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 35 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4001,11 +4033,13 @@ account for the new pivot point.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The EUI showed the new hexapod position accounting for the new pivot
+point.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 39 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 39 & Step Execution Status: \textbf{ Fail } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4104,7 +4138,7 @@ But: Is this a consequence from failing inPosition? See Step 8. 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 40 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 40 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4131,7 +4165,7 @@ change position to account for the new pivot point.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 41 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
+Step 41 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5186,7 +5220,9 @@ transitions into Fault state.
 \begin{itemize}
 \tightlist
 \item
-  Done by Felipe when changing the limit switch logic to normally closed
+  Done by Felipe when changing the limit switch logic to normally
+  closed. The extended Limit Switch error event was created and the
+  system transitioned into a Fault state.
 \end{itemize}
 
 }
@@ -5213,7 +5249,9 @@ transitions into Fault state.
 \begin{itemize}
 \tightlist
 \item
-  Done by Felipe when changing the limit switch logic to normally closed
+  Done by Felipe when changing the limit switch logic to normally
+  closed. The extended Limit Switch error event was created and the
+  system transitioned into a Fault state.
 \end{itemize}
 
 }
