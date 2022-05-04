@@ -2,7 +2,7 @@
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpr.latex.jinja2.
 % using docsteady version 2.2.4
 % Please do not edit -- update information in Jira instead
-\documentclass[PSE,STR,toc]{lsstdoc}
+\documentclass[PSE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
@@ -31,7 +31,7 @@
 
 \title{LVV-P68: M2 Hexapod Functional Re-verification and Integration with SAL Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-05-03 }
+\date{ 2022-05-04 }
 \author{ Holger Drass }
 
 \input{history_and_info.tex}
@@ -108,6 +108,7 @@ This document was generated from Jira, obtaining the relevant information from t
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P68}{LVV-P68}
 ~Jira Test Plan and related Test Cycles (
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C147}{LVV-C147}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C203}{LVV-C203}
 ).
 
 Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
@@ -268,6 +269,11 @@ Holger Drass }
 \medskip
 \end{minipage}
 \\ \hline
+\multicolumn{2}{r}{T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C203}{LVV-C203} owner:} &
+\multicolumn{2}{l}{\textbf{
+Holger Drass }
+} \\\hline
+\textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
 \end{longtable}
 }
 
@@ -329,6 +335,9 @@ extensively tested and improved.\\[2\baselineskip]
 \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
 \href{https://jira.lsstcorp.org/browse/LVV-19512}{LVV-19512}
 \\\hline
+\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C203}{LVV-C203}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification on the TMA }} & Not Executed \\\hline
+\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -3173,7 +3182,7 @@ INFO:Script:START- M2 Hexapod Integration Test -- LVV-T1802 Test Step 11
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3181,11 +3190,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-      0.16        0.45       -0.34       -0.00        0.00        0.00  
+      0.16        0.45       -0.34       -0.00        0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3197,7 +3206,7 @@ EnabledSubstate.STATIONARY
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3205,7 +3214,7 @@ INFO:Script:STOP- M2 Hexapod Integration Test -- LVV-T1802 Test Step 11
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3213,7 +3222,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -9.43       17.09     1241.17        0.00       -0.00        0.00 
+     -9.43       17.09     1241.17        0.00       -0.00        0.00 
 \end{verbatim}
 
 ~
@@ -3321,7 +3330,7 @@ INFO:Script:START- M2 Hexapod Integration Test -- LVV-T1802 Test Step 17
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3333,7 +3342,7 @@ EnabledSubstate.STATIONARY
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3341,7 +3350,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.09        0.00      799.94       -0.00       -0.00        0.00
+     -0.09        0.00      799.94       -0.00       -0.00        0.00
 \end{verbatim}
 
 ~
@@ -3408,11 +3417,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.09        0.00      799.94       -0.00       -0.00        0.00  
+     -0.09        0.00      799.94       -0.00       -0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3545,7 +3554,7 @@ the actuators complete the move at nearly the same time.
 \end{itemize}
 
 \begin{verbatim}
-        EnabledSubstate.MOVING_POINT_TO_POINT
+        EnabledSubstate.MOVING_POINT_TO_POINT
 \end{verbatim}
 
 In this substate, no move command can be received?
@@ -3806,11 +3815,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.03       -0.21       -0.22        0.00        0.00        0.00  
+     -0.03       -0.21       -0.22        0.00        0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3826,7 +3835,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-    500.05      800.33      199.87       -0.00       -0.00        0.00  
+    500.05      800.33      199.87       -0.00       -0.00        0.00  
 \end{verbatim}
 
 }
@@ -3874,7 +3883,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-    500.37      799.63      699.90       -0.00       -0.00       -0.00  
+    500.37      799.63      699.90       -0.00       -0.00       -0.00  
 \end{verbatim}
 
 }
@@ -4084,11 +4093,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.21      199.97        0.01       -0.05        0.00  
+   2000.33    -3500.21      199.97        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -4108,11 +4117,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
+   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -4124,15 +4133,15 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
+   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
-But: Is this a consequence from failing inPosition? See Step 8. 
+But: Is this a consequence from failing inPosition? See Step 8. 
 \end{verbatim}
 
 }
@@ -5278,6 +5287,33 @@ state.
 not tested
 
 }
+
+
+\subsection{Test Cycle LVV-C203 }
+
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C203}{M2 Hexapod Re-verification on the TMA}} in Jira.
+
+Test Cycle name: M2 Hexapod Re-verification on the TMA\\
+Status: Not Executed
+
+M2 hexapod location has changed for this installed on the TMA.\\
+New cabling for the hexapod actuators is installed.\\
+Low-level controller, EUI, and CSC Software are updated.
+
+\subsubsection{Software Version/Baseline}
+\begin{enumerate}
+\tightlist
+\item
+  M2 Hexapod Control Software with SAL v4.0 or higher
+\item
+  EFD with SAL v4.0 or higher
+\end{enumerate}
+
+\subsubsection{Configuration}
+No varying configuration for the hexapod and the mass simulator between
+test cycles.\\[2\baselineskip]
+
+\subsubsection{Test Cases in LVV-C203 Test Cycle}
 
 
 
