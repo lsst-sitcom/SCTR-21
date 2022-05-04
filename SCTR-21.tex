@@ -2,7 +2,7 @@
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpr.latex.jinja2.
 % using docsteady version 2.2.4
 % Please do not edit -- update information in Jira instead
-\documentclass[PSE,STR,toc]{lsstdoc}
+\documentclass[PSE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
@@ -274,6 +274,34 @@ Holger Drass }
 Holger Drass }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
+& {\small Holger Drass } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small (1) Software Engineer\\
+(1) Hardware Engineer }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{LVV-T1800}
+& {\small Holger Drass } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small (1) Software Engineer\\
+(1) Mechanical Engineer\\
+(1) Systems Engineer\\[2\baselineskip] }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
+& {\small Holger Drass } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small (1) Software Engineer\\
+(1) Hardware Engineer }
+\medskip
+\end{minipage}
+\\ \hline
 \end{longtable}
 }
 
@@ -338,6 +366,33 @@ extensively tested and improved.\\[2\baselineskip]
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C203}{LVV-C203}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ M2 Hexapod Re-verification on the TMA }} & Not Executed \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{LVV-T1804}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{LVV-T1800}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{LVV-T1802}
+&  2
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -3182,7 +3237,7 @@ INFO:Script:START- M2 Hexapod Integration Test -- LVV-T1802 Test Step 11
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3190,11 +3245,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-      0.16        0.45       -0.34       -0.00        0.00        0.00  
+      0.16        0.45       -0.34       -0.00        0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3206,7 +3261,7 @@ EnabledSubstate.STATIONARY
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3214,7 +3269,7 @@ INFO:Script:STOP- M2 Hexapod Integration Test -- LVV-T1802 Test Step 11
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3222,7 +3277,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -9.43       17.09     1241.17        0.00       -0.00        0.00 
+     -9.43       17.09     1241.17        0.00       -0.00        0.00 
 \end{verbatim}
 
 ~
@@ -3330,7 +3385,7 @@ INFO:Script:START- M2 Hexapod Integration Test -- LVV-T1802 Test Step 17
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3342,7 +3397,7 @@ EnabledSubstate.STATIONARY
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3350,7 +3405,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.09        0.00      799.94       -0.00       -0.00        0.00
+     -0.09        0.00      799.94       -0.00       -0.00        0.00
 \end{verbatim}
 
 ~
@@ -3417,11 +3472,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.09        0.00      799.94       -0.00       -0.00        0.00  
+     -0.09        0.00      799.94       -0.00       -0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3554,7 +3609,7 @@ the actuators complete the move at nearly the same time.
 \end{itemize}
 
 \begin{verbatim}
-        EnabledSubstate.MOVING_POINT_TO_POINT
+        EnabledSubstate.MOVING_POINT_TO_POINT
 \end{verbatim}
 
 In this substate, no move command can be received?
@@ -3815,11 +3870,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-     -0.03       -0.21       -0.22        0.00        0.00        0.00  
+     -0.03       -0.21       -0.22        0.00        0.00        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -3835,7 +3890,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-    500.05      800.33      199.87       -0.00       -0.00        0.00  
+    500.05      800.33      199.87       -0.00       -0.00        0.00  
 \end{verbatim}
 
 }
@@ -3883,7 +3938,7 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-    500.37      799.63      699.90       -0.00       -0.00       -0.00  
+    500.37      799.63      699.90       -0.00       -0.00       -0.00  
 \end{verbatim}
 
 }
@@ -4093,11 +4148,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.21      199.97        0.01       -0.05        0.00  
+   2000.33    -3500.21      199.97        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -4117,11 +4172,11 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
+   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
@@ -4133,15 +4188,15 @@ hex position
 \end{verbatim}
 
 \begin{verbatim}
-   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
+   2000.33    -3500.18      199.96        0.01       -0.05        0.00  
 \end{verbatim}
 
 \begin{verbatim}
- 
+ 
 \end{verbatim}
 
 \begin{verbatim}
-But: Is this a consequence from failing inPosition? See Step 8. 
+But: Is this a consequence from failing inPosition? See Step 8. 
 \end{verbatim}
 
 }
@@ -5314,6 +5369,3921 @@ No varying configuration for the hexapod and the mass simulator between
 test cycles.\\[2\baselineskip]
 
 \subsubsection{Test Cases in LVV-C203 Test Cycle}
+
+\paragraph{ LVV-T1804 - M2 Hexapod Software Functional Re-verification }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1804}{\textit{ LVV-T1804 } }
+test case in Jira.
+
+The objective of this test case is to re-verify the functional
+requirements of the M2 hexapod's software, after shipment of the
+hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
+and \citeds{LTS-160}. This test case will only exercise the functionality that
+was executed previously and meets the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Only requires the M2 hexapod to be operable
+\item
+  Only requires testing the synchronous mode
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Asynchronous mode is not a standard mode of operation}
+  \end{itemize}
+\item
+  Only requires the vendor's EUI software and hardware via local control
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Does \textbf{NOT} require integration with SAL
+  \end{itemize}
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles.
+\item
+  This test case can be executed with a \textbf{simulated M2 mass or
+  actual M2 hardware}
+\end{itemize}
+
+The software functional requirements were previously verified during the
+test campaign by the vendor at the vendor's facility and accepted by
+Rubin Observatory during the Factory Acceptance Test review. The test
+procedure used during the vendor's acceptance testing is the \emph{LSST
+Hexapods-Rotator Software Acceptance Test Procedure} which is attached
+to this test case. The test steps of this test case are taken directly
+from that document on how to perform the test in a similar way as was
+performed previously and the test steps include changes noted by the
+vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
+Manual} for more information on how to operate the hexapod.
+
+\textbf{ Preconditions}:\\
+Prior to the execution of this test case to re-verify the M2 Hexapod
+hardware functional requirements, the following Summit tasks must be
+completed:
+
+\begin{itemize}
+\tightlist
+\item
+  The measurement equipment has been set up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
+\end{itemize}
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Release the Lock-Out-Tag-Out (LOTO) for the Rotator Circuit and the
+Hexapod Circuit using the keys stored in Cabinet 2 at Level 3.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Access the Netbooter for the Rotator and Hexapod and turn on the Drivers
+and the CPU for each component in this order.\\
+Here are the addresses for the netbooters:\\
+\href{http://rot-netbooter.cp.lsst.org/}{rot-netbooter.cp.lsst.org}\\
+\href{http://camhex-netbooter.cp.lsst.org/}{camhex-netbooter.cp.lsst.org}\\
+The user/password is {admin/admin}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Raise (disengage) the E-Stops for the CCW and HexRot.\\
+Announce on \#summit-announce Slack Channel.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the little black knob in the Hexapod Cabinet to reset the power of
+its controller.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{STARTING THE EUI}\\[2\baselineskip]Connect to the hexapod
+management computer using X2Go using your IPA/VPN credentials.\\
+Open a terminal.\\
+Change to the folder\\[2\baselineskip]{cd
+/rubin/hexapod/build/}\\[2\baselineskip]Start the EUI with the
+command:\\[2\baselineskip]{./runCamHexEui\\
+}\\
+for the camera and the M2 hexapod, respectively.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\# Check if CamHex EUI is running\\
+ps -aux \textbar{} grep runCamHex\\[2\baselineskip]cd
+/rubin/rotator/build\\
+./runRotEui\\[2\baselineskip]\# Check if M2Hex EUI is running\\
+ps -aux \textbar{} grep runM2Hex
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The EUI is in the Offline State/PublishOnly substate and is able to
+publish through SAL but cannot receive commands.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from OFFLINE State/Publish Only Substate to OFFLINE
+State/Available Substate.}\\[2\baselineskip]On the Main tab, select the
+\textbf{Offline SubState Command} radio button field in the
+\textbf{Commands to Send} section.\\
+Then, set the \textbf{Offline SubState Triggers} to \textbf{System
+Ready}.\textbf{~}\\
+Finally,\textbf{~}click on the \textbf{Send Command}
+button.\\[2\baselineskip]\includegraphics[width=1.79167in]{jira_imgs/1024.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from the OfflineState/PublishOnly substate to the
+OfflineState/AvailableState substate and the Command Source says
+eGUI.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from OFFLINE State to STANDBY State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button\textbf{.}
+
+On \textbf{State Triggers}, scroll and select \textbf{Enter Control}.
+
+Finally,\textbf{~}click on the \textbf{Send Command} button.
+
+The Hexapod should go to \textbf{STANDBY} state.
+
+\includegraphics[width=1.79167in]{jira_imgs/1028.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions to the Standby state and the primary state
+display box at the top of the Main says Standby state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from STANDBY State to DISABLED State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button.
+
+On \textbf{State Triggers}, scroll and select the \textbf{Start~}option.
+
+Click on the \textbf{Send Command} button.
+
+The Hexapod should go to DISABLED state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into DISABLED State and the current configuration
+parameters are maintained from the default parameters or from the
+previous DDS start command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from DISABLED State to ENABLED State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button.
+
+On \textbf{State Triggers}, scroll and select the
+\textbf{Enabled~}option.
+
+Click on the \textbf{Send Command~}button.
+
+The Hexapod should go to ENABLED state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the ENABLED State/Stationary sub-state, the
+motor drives are enabled and motion can be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textless{}conditional
+state\textgreater{}\\[2\baselineskip]\textbf{Recovering from a FAULT
+State}\\[2\baselineskip]If a fault occurs in any of the other states,
+the system will automatically transition to the FAULT State.\\
+While in the Fault state, select the \textbf{clearError} option in the
+\textbf{State Triggers~}option list. Then, click on the \textbf{Send
+Command~}button\textbf{.}\\[2\baselineskip]Note: If the fault that
+occurs goes through the interlock system, reset the safety relay switch
+and send a \textbf{clearError} command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions back to the STANDBY state. (Go back to Step 8)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.3.1 EUI Tests of the attached Software Acceptance Test
+Procedure}\\
+At startup, confirm that the system starts in the Offline/PublishOnly
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod starts in the Offline/PublishOnly state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send an offline substate trigger of systemReady.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the Offline/Available substate.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send an EnterControl trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Offline/Available to Standby state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a Start trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Standby to Disabled state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send an Enable trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Disabled to Enabled state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 16 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a Disable trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Enabled to Disabled state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a Standby trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Disabled state to Standby state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 18 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a exitControl trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from Standby state to Offline state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 19 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Return to the Enabled state and trip the safety interlock switch.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions to Fault state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 20 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Reset the safety interlock and send a ClearError trigger.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The CSC, upon receiving the ¨clearError¨ trigger, transitions from
+FaultState to OfflineState/PublishOnly when the system was in any of the
+OfflineStates before the error occurred. The CSC, upon receiving the
+``clearError'' trigger, transitions to StandbyState when it was in
+EnableState or DisableState before the error occurred.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 21 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 4.1 Hexapod Events of the attached Software Acceptance
+Test Procedure}\\[2\baselineskip]In the Enabled/Stationary state, unplug
+a motor encoder cable for one of the actuators.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:~}Perform the following set of steps using the EUI
+instead of the DDS and verify the events are displayed on the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 22 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 23 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Enabled/Stationary state, unplug a linear encoder cable for one
+of the actuators.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 24 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 25 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Unplug a motor power cable from one of the actuators and command a
+PositionSet/Move.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Following Error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 26 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 27 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Activate an extension limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+An Extended Limit Switch error event is created and the system
+transitions into Fault state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 28 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 29 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Activate a retraction limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Retracted Limit Switch error event is created and the system
+transitions into Fault state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 30 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 31 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Unplug the Ethercat cable between the control PC and the first Copley
+XE2 drive.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+An Ethercat Lost event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 32 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send the ``clearError'' trigger and bring the system to the
+Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is in the Enabled/Stationary state and ready to be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 33 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#1 - Synchronous PositionSet and Move
+Commands}\\[2\baselineskip]With the synchronous button enabled and in
+enabled/stationary state, send a positionSet command of (0um, 0um,
+200um, 0 deg, 0 deg, 0 deg) using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 34 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary state,
+send a positionSet command of (2000um, -3500um, 200um, .01 deg, -.05deg,
+.002deg) using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 35 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+Pivot position is shown in the GUI. Please mention in the results. Use
+the MOOG pivot point for comparability with the previous results.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the last commanded position of (2000um, -3500um,
+200um, .01 deg, -.05deg, .002deg). Since the test is done in synchronous
+mode the actuators are expected to complete the move at nearly the same
+time as seen on the motion complete lights on the telemetry screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 36 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 37 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#2 - Pivot, PositionSet and Move
+Commands}\\[2\baselineskip]In enabled/stationary state and at the last
+commanded position of (2000um, -3500um, 200um, .01 deg, -.05deg,
+.002deg), change the pivot point from the default location to (0,0,0)
+using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The actuator positions do not change, but the hexapod position is
+(-407um, -3982um, 199um, 0.01deg, -0.05deg, 0.002deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 38 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the enabled/stationary state, send a positionSet command of (2000um,
+-3500um, 200um, .01 deg, -.05deg, .002deg) using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 39 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command using the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the commanded position of (2000um, -3500um, 200um,
+.01 deg, -.05deg, .002deg) and the actuators change position to account
+for the new pivot point.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 40 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 41 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#4 - Synchronous Offset and Move
+Commands}\\[2\baselineskip]With the synchronous button enabled and in
+enabled/stationary state, send a positionSet command of (500um, 800um,
+200um, 0 deg, 0 deg, 0 deg).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 42 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary state,
+send an offset command of (0um, 0um, 2000um, 0 deg, 0 deg, 0 deg).~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 43 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves only 2000um in Z from the previous position. Since the
+test is done in synchronous mode the actuators are expected to complete
+the move at nearly the same time as seen on the motion complete lights
+on the telemetry screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 44 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 45 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Instead of Asynchronous Test}\\
+{With the synchronous button enabled and in enabled/stationary
+state,}{\textbf{~}}{s}end a position set command of (0um, 0um, 0um,
+0.1deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 46 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 47 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 48 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary
+state,\textbf{~}send a position set command of (0um, 0um, 0um, 0deg,
+0.1deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 49 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0deg,
+0.1deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 50 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 51 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+With the synchronous button enabled and in enabled/stationary
+state,\textbf{~}send a position set command of (0um, 0um, 0um, 0.1deg,
+0.1deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 52 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the commanded position of (0um, 0um, 0um, 0.1deg,
+0.1deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 53 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 39s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 54 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.1 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#5 - Stop Commands}\\[2\baselineskip]In
+enabled/stationary state, send a position set command of (0um, 0um,
+5000um, 0 deg, 0 deg, 0 deg).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 55 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod starts to move to the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 56 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 3s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 57 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a stop command.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod quickly comes to a stop prior to reaching the commanded
+position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T1800 - M2 Hexapod Hardware Functional Re-verification }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1800}{\textit{ LVV-T1800 } }
+test case in Jira.
+
+The objective of this test case is to re-verify the functional
+requirements of the M2 hexapod's hardware, after shipment from the
+vendor's facility to the Summit, as defined in \citeds{LTS-206}. This test case
+will only exercise the functionality that was executed previously and
+meets the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Only requires the M2 hexapod to be operable
+\item
+  Only requires the EUI software and hardware via local control
+\item
+  Requires a laser tracker, mechanical gauges, inductive current probe
+\item
+  Does require the M2 hexapod temperature sensors to be operating
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles
+\item
+  Does \textbf{NOT~}require the M2 hexapod to be in a climate-controlled
+  environment
+\end{itemize}
+
+The hardware functional requirements were previously verified during the
+test campaign by the vendor at the vendor's facility and accepted by
+Rubin Observatory during the Factory Acceptance Test review. The test
+procedure used during the vendor's acceptance testing is the \emph{LSST
+Hexapods-Rotator Acceptance Test Procedure} which is attached to this
+test case. The test steps of this test case are taken directly from that
+document on how to perform the test in a similar way as was performed
+previously and the test steps include changes noted by the
+vendor.\\[2\baselineskip]See the attached \emph{LSST Hexapod Operator's
+Manual} for more information on how to operate the hexapod.
+
+\textbf{ Preconditions}:\\
+Prior to the execution of this test case to re-verify the M2 Hexapod
+hardware functional requirements, the following Summit tasks must be
+completed:
+
+\begin{itemize}
+\tightlist
+\item
+  The measurement equipment has been set up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
+\item
+  The laser tracker has been set up for measurements
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-3951}
+  \end{itemize}
+\end{itemize}
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Release the Lock-Out-Tag-Out (LOTO) for the Rotator Circuit and the
+Hexapod Circuit using the keys stored in Cabinet 2 at Level 3.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Access the Netbooter for the Rotator and Hexapod and turn on the Drivers
+and the CPU for each component in this order.\\
+Here are the addresses for the netbooters:\\
+\href{http://rot-netbooter.cp.lsst.org/}{rot-netbooter.cp.lsst.org}\\
+\href{http://camhex-netbooter.cp.lsst.org/}{camhex-netbooter.cp.lsst.org}\\
+The user/password is {admin/admin}.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Raise (disengage) the E-Stops for the CCW and HexRot.\\
+Announce on \#summit-announce Slack Channel.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the little black knob in the Hexapod Cabinet to reset the power of
+its controller.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{STARTING THE EUI}\\[2\baselineskip]Connect to the hexapod
+management computer using X2Go using your IPA/VPN credentials.\\
+Open a terminal.\\
+Change to the folder\\[2\baselineskip]{cd
+/rubin/hexapod/build/}\\[2\baselineskip]Start the EUI with the
+command:\\[2\baselineskip]{./runCamHexEui\\
+}\\
+for the camera and the M2 hexapod, respectively.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\# Check if CamHex EUI is running\\
+ps -aux \textbar{} grep runCamHex\\[2\baselineskip]cd
+/rubin/rotator/build\\
+./runRotEui\\[2\baselineskip]\# Check if M2Hex EUI is running\\
+ps -aux \textbar{} grep runM2Hex
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The EUI is in the Offline State/PublishOnly substate and is able to
+publish through SAL but cannot receive commands.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from OFFLINE State/Publish Only Substate to OFFLINE
+State/Available Substate.}\\[2\baselineskip]On the Main tab, select the
+\textbf{Offline SubState Command} radio button field in the
+\textbf{Commands to Send} section.\\
+Then, set the \textbf{Offline SubState Triggers} to \textbf{System
+Ready}.\textbf{~}\\
+Finally,\textbf{~}click on the \textbf{Send Command}
+button.\\[2\baselineskip]\includegraphics[width=1.79167in]{jira_imgs/1024.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from the OfflineState/PublishOnly substate to the
+OfflineState/AvailableState substate and the Command Source says
+eGUI.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from OFFLINE State to STANDBY State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button\textbf{.}
+
+On \textbf{State Triggers}, scroll and select \textbf{Enter Control}.
+
+Finally,\textbf{~}click on the \textbf{Send Command} button.
+
+The Hexapod should go to \textbf{STANDBY} state.
+
+\includegraphics[width=1.79167in]{jira_imgs/1028.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions to the Standby state and the primary state
+display box at the top of the Main says Standby state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from STANDBY State to DISABLED State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button.
+
+On \textbf{State Triggers}, scroll and select the \textbf{Start~}option.
+
+Click on the \textbf{Send Command} button.
+
+The Hexapod should go to DISABLED state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into DISABLED State and the current configuration
+parameters are maintained from the default parameters or from the
+previous DDS start command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from DISABLED State to ENABLED State.}
+
+On \textbf{Commands to Send}, select the \textbf{State Commands~}radio
+button.
+
+On \textbf{State Triggers}, scroll and select the
+\textbf{Enabled~}option.
+
+Click on the \textbf{Send Command~}button.
+
+The Hexapod should go to ENABLED state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the ENABLED State/Stationary sub-state, the
+motor drives are enabled and motion can be commanded.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textless{}conditional
+state\textgreater{}\\[2\baselineskip]\textbf{Recovering from a FAULT
+State}\\[2\baselineskip]If a fault occurs in any of the other states,
+the system will automatically transition to the FAULT State.\\
+While in the Fault state, select the \textbf{clearError} option in the
+\textbf{State Triggers~}option list. Then, click on the \textbf{Send
+Command~}button\textbf{.}\\[2\baselineskip]Note: If the fault that
+occurs goes through the interlock system, reset the safety relay switch
+and send a \textbf{clearError} command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions back to the STANDBY state. (Go back to Step 8)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.12 Positioning~}of the LSST Hexapods-Rotator
+Acceptance Test Procedure, Sheet 57-58.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The position of the hexapod is able to reach the commanded positions
+within the absolute accuracy specifications of 25um in Z, 125um in XY,
+83x10-5deg in RXRY, and 750x10-5deg in RZ.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.15 Radial (X and Y) Translation Range~}of
+the}~\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle.~{Wait for 39s
+between each movement.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod is capable of moving to the positions in the XY plane listed
+in the Acceptance Test Procedure.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.13 Centers of Rotation~}of the LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 58-59.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle. Wait for 39s
+between each movement. The spherically mounted retroreflector (SMR) will
+be mounted on the ring holding the M2 mass surrogate or the M2 mass
+simulator
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The center of rotation is able to be moved.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.17 Axial (Z) Translation Range~}of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 60.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle. {Wait for 39s
+between each movement.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod is capable of moving to the positions in the Z plane listed
+in the Acceptance Test Procedure.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.19 Rotational Range Around X-Axis (Tip) and
+Y-Axis (Tilt)~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
+Procedure, Sheet 61.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle{. Wait for 39s
+between each movement.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod is capable of moving to the positions in the RXRY plane
+listed in the Acceptance Test Procedure.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 16 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.21 Rotation Range Around Z-Axis (Twist)~}of
+the} \textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 62.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle. Wait for 39s
+between each movement.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod is capable of moving to the positions in the RZ-axis listed
+in the Acceptance Test Procedure.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.23 Hexapod Repeatability~}of the} \textbf{LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 63-70.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Allow a minimum of 30 seconds between moves.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The repeatability of the hexapod is likely better than can be determined
+by the test equipment. This test will likely falsely show a deficiency
+in the hexapod performance as a result of test equipment accuracy/
+repeatability limitation.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 18 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.24 Hexapod Absolute Accuracy~}of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 70-74.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Test at a single elevation angle.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The accuracy of the hexapod is at least the following:\\[2\baselineskip]
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Axis & Required Accuracy (um, deg)\tabularnewline
+\midrule
+\endhead
+X & 125\tabularnewline
+Y & 125\tabularnewline
+Z & 25\tabularnewline
+RX & 0.00083\tabularnewline
+RY & 0.00083\tabularnewline
+RZ & 0.0075\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbf{NOTE:~}The accuracy of the hexapod may be better than can be
+determined by the test equipment. This may falsely show a deficiency in
+the hexapod performance as a result of test equipment accuracy/
+repeatability limitation.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 19 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.26 Hexapod Radial (X and Y) and Axial (Z)
+Velocity Range}\textbf{~and \emph{3.5.27}}\emph{~Hexapod Rotational
+Velocity~}of the} \textbf{LSST Hexapods-Rotator Acceptance Test
+Procedure, Sheet 75.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:~}Only test this using synchronous mode. Wait for 39s
+between each movement.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod velocity exceeds the 106um/s in XY and 0.0062deg/s in RXYRY
+and RZ requirements.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 20 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow 3.5.28\emph{~Hexapod Heat Dissipation} of the}
+\textbf{LSST Hexapods-Rotator Acceptance Test Procedure, Sheet 75-76.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:~}Calculate the power by having an amp meter on the
+legs. This test can be done simultaneously with the other test
+steps.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The current measured by the inductive current probes is calculated to
+meet the heat dissipation requirement.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 21 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Follow \emph{3.5.14 Cross Talk Motion~}of the} \textbf{LSST
+Hexapods-Rotator Acceptance Test Procedure, Sheet 59.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: Analyze data from 3.5.15, 3.5.17, and 3.5.19 test
+steps after testing to verify cross talk.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There is no cross-talk observed.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T1802 - Integration of M2 Hexapod with SAL }\mbox{}\\
+
+Version \textbf{2}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1802}{\textit{ LVV-T1802 } }
+test case in Jira.
+
+The objective of this test case is to re-verify the functional
+requirements of the M2 hexapod's software, after shipment of the
+hardware from the vendor's facility to the Summit, as defined in \citeds{LTS-206}
+and \citeds{LTS-160}. This test case will only exercise the functionality that
+was executed previously and meets the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Only requires the use of Rubin Observatory code to replace MOOG's
+  middleware code
+\item
+  Only requires the M2 hexapod to be operable
+\item
+  Only requires command through the CSC after the PXI real-time
+  controller is switched from GUI mode to DDS mode
+\item
+  Only requires testing the synchronous mode
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Asynchronous mode is not a standard mode of operation}
+  \end{itemize}
+\item
+  Does require the M2 hexapod temperature sensors to be operating
+\item
+  Does \textbf{NOT} require the M2 hexapod to be rotated to various
+  elevation angles.
+\item
+  Does \textbf{NOT~}require the M2 hexapod to be in a climate-controlled
+  environment
+\end{itemize}
+
+The software functional requirements were previously verified during the
+test campaign by the vendor at the vendor's facility and accepted by
+Rubin Observatory during the Factory Acceptance Test review. The test
+procedure used during the vendor's acceptance testing is the \emph{LSST
+Hexapods-Rotator Software Acceptance Test Procedure} which is attached
+to this test case. The test steps of this test case are the same steps
+from the procedure for the testing of the Camera Hexapod. The order of
+the steps was changed to reflect the \emph{Proposal of Hexapod Test~on
+the Dec. 2019~}Confluence page which can be found linked in the
+Traceability tab.\\[2\baselineskip]See the attached \emph{LSST Hexapod
+Operator's Manual} for more information on how to operate the hexapod.
+
+\textbf{ Preconditions}:\\
+Prior to the execution of this test case to re-verify the M2 Hexapod
+hardware functional requirements, the following Summit tasks must be
+completed:
+
+\begin{itemize}
+\tightlist
+\item
+  The measurement equipment has been set-up for testing
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://jira.lsstcorp.org/browse/SUMMIT-1943}
+  \end{itemize}
+\end{itemize}
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Hexapod DDS Startup Procedure}\\[2\baselineskip]Release the
+Lock-Out-Tag-Out (LOTO) for the Rotator Circuit and the Hexapod Circuit
+using the keys stored in Cabinet 2 at Level 3.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Access the Netbooter for the Rotator and Hexapod and turn on the Drivers
+and the CPU for each component in this order.\\
+Here are the addresses for the netbooters:\\
+\href{http://rot-netbooter.cp.lsst.org/}{rot-netbooter.cp.lsst.org}\\
+\href{http://camhex-netbooter.cp.lsst.org/}{camhex-netbooter.cp.lsst.org}\\
+Look for the credentials in the 1password MainTel vault.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Raise (disengage) the E-Stops for the CCW and HexRot.\\
+Announce on \#summit-announce Slack Channel.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use the little black knob in the Hexapod Cabinet to reset the power of
+its controller.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{STARTING THE EUI}\\[2\baselineskip]Connect to the hexapod
+management computer using X2Go\\
+Open a terminal\\
+change to the folder\\[2\baselineskip]cd
+/rubin/hexapod/build/\\[2\baselineskip]Start the EUI with the
+command:\\[2\baselineskip]./runCamHexEui\\
+./runM2HexEui\\[2\baselineskip]for the camera and the M2 hexapod,
+respectively.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+{\# Check if CamHex EUI is running\\
+}ps -aux \textbar{} grep runCamHex\\[2\baselineskip]cd
+/rubin/hexapod/build\\
+./runCamHexEUI\\[2\baselineskip]{\# Check if M2Hex EUI is running\\
+}ps -aux \textbar{} grep runM2Hex
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The EUI is in the Offline State/PublishOnly substate and is able to
+publish through SAL but cannot receive commands.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Transition from OFFLINE State/Publish Only Substate to OFFLINE
+State/Available Substate.}\\[2\baselineskip]On the Main tab, select the
+\textbf{Offline SubState Command} radio button field in the
+\textbf{Commands to Send} section.\\
+Then, set the \textbf{Offline SubState Triggers} to \textbf{System
+Ready}.\textbf{~}\\
+Finally,\textbf{~}click on the \textbf{Send Command}
+button.\\[2\baselineskip]\includegraphics[width=1.79167in]{jira_imgs/1024.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions from the OfflineState/PublishOnly substate to the
+OfflineState/AvailableState substate and the Command Source says
+eGUI.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{SWITCHING TO DDS MODE}\\
+\includegraphics[width=1.68750in]{jira_imgs/1025.png}If the Command
+Source does not show DDS, go to the \textbf{Parameters} tab, select
+\textbf{DDS} under the \textbf{Command Source} and click the \textbf{Set
+Cmd Source} button.\\
+\includegraphics[width=2.34375in]{jira_imgs/1026.png}\textbf{Note:~If
+the GUI is used after being set to DDS mode, the system will switch back
+the Command Source to GUI and ignore any DDS commands. The Command
+Source must show DDS in order to receive DDS commands.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system is capable of receiving/responding to DDS commands.\\
+The \textbf{Command Source = DDS} green LED in the Telemetry Tab should
+turn on.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+From any state send the CSC into OfflineState/AvailableState using the
+EUI. Change the control at the EUI from EUI control to CSC
+control.\\[2\baselineskip]Verify the Hexapod is commandable by DDS by
+checking the EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_logevent\_commandableByDDS} publishes true.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the TCP/IP is connected to the low level controller.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_logevent\_connected} publishes true.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the \emph{MTHexapod\_logevent\_configuration} event is publishing
+data to the EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:} This step is to verify the
+\emph{MTHexapod\_logevent\_configuration} event is publishing initial
+data. There will be steps later to verify that the event is published as
+a result of updating values.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_logevent\_configuration} is publishing data.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the \emph{MTHexapod\_logevent\_interlock} event is unengaged and
+publishing data to the EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_logevent\_interlock} is publishing and shows no
+safety interlock is engaged.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Hit the E-stop.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}This will mimic triggering an interlock signal from the
+GIS.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_logevent\_interlock~}publishes true.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Reset the E-stop and clear the error:
+
+\begin{itemize}
+\tightlist
+\item
+  With the CSC in the Fault state, issue a \emph{standby} command via
+  the CSC using the notebook.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Hexapod and E-stop are reset and
+\emph{MTHexapod\_logevent\_interlock~}publishes false.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify that the thermal sensors are connected and producing telemetry
+into the EFD. ``lsst.sal.ESS.temperature''
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+All actuator temperatures are published to the EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 15 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+The following steps define what the Jupyter Notebook for this test case
+implements. Executing the Jupyter notebook is the only actual command
+and control step that needs to be executed.\\
+Transition the state machine into \emph{disabledState~}to publish
+telemetry
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The Jupyter notebook controls the system to run through the steps below.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 16 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the \emph{MTHexapod\_actuators~}telemetry is being published to
+the EFD. Positions, velocities, accelerations.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_actuators} telemetry is being ingested into the
+EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 17 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the \emph{MTHexapod\_application~}data is being published to the
+EFD.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_application} telemetry is being ingested into the
+EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 18 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify the \emph{MTHexapod\_electrical~}data is being published to the
+EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The \emph{MTHexapod\_electrical} telemetry is being ingested into the
+EFD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 19 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{{MOVE TEST}}\\
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#1 - Synchronous Move Commands}\\
+With the synchronous button enabled and in enabled/stationary state,
+send a \emph{move} command of (500um, -500um, 200um, 0.01deg, -0.015deg,
+0deg).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The hexapod moves to (x= 500um,y= -500um, z=200um, u=0.01deg,
+  v=-0.015deg, w=0deg)
+\item
+  Since the Hexapod is in synchronous mode, the actuators complete the
+  move at nearly the same time.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 20 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the corresponding DDS events that were generated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The controllerState.enabledSubstate goes to MOVING\_POINT\_TO\_POINT
+  when the move begins and STATIONARY when the move ends.
+\item
+  An \emph{MTHexapod\_logevent\_inPosition} event is generated when the
+  move is complete
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 21 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#5 - Stop Commands}\\
+In the enabled/stationary state, send a \emph{move} command of (x=0um,
+y=0um, z=5000um, u=0deg, v=0deg, w=0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod begins to move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 22 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Wait 3s.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod is still moving.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 23 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a \emph{stop} command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The hexapod stops before reaching the previously commanded position
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 24 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the corresponding DDS events that were generated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The controllerState.enabledSubstate goes to CONTROLLED\_STOPPING when
+  the stop is requested, then STATIONARY when the hexapod has halted.
+\item
+  No \emph{MTHexapod\_logevent\_inPosition} event is generated.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 25 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Test the ``setCompensationMode'' command.}\\[2\baselineskip]In
+enabled/stationary state, send a \emph{move} command of (x=0um, y=0um,
+z=800um, u=0deg, v=0deg, w=0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the position (x=0um, y=0um, z=800um, u=0deg,
+v=0deg, w=0deg) and, since we are moving in synchronous mode, the
+actuators complete the move at nearly the same time.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 26 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Ensure that MTMount publishes the telescope elevation angle and
+MTRotator publishes the rotation angle of the rotator. Either as real
+components or through controllers simulating the components.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Published telescope elevation and rotator angle.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 27 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, set \emph{setCompensationMode} command to
+enable=True.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The hexapod does not move and the
+  ~\emph{MTHexapod\_logevent\_compensationMode} event appears as true in
+  the EFD.
+\item
+  The \emph{MTHexapod\_logevent\_compensatedPosition} is also sent to
+  the EFD.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 28 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (0um, 0um,
+800um, 0deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to a slightly different position than (0um, 0um,
+800um, 0deg, 0deg, 0deg) and, since we are moving in synchronous mode,
+the actuators complete the move at nearly the same time.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 29 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+{Check if there are any different events between move with and without
+setCompensationMode=True. Check the movement in the EFD use:\\
+Compare \emph{MTHexapod\_logevent\_compensatedPosition} to
+\emph{MTHexapod\_logevent\_uncompensatedPosition}}{\\
+}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The changes are expected according to this table:\\
+\includegraphics[width=3.12500in]{jira_imgs/1620.png}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 30 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send again the same \emph{move} command of
+(0um, 0um, 800um, 0deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod does not move since it stayed in compensationMode.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 31 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+{\textbf{OFFSET TEST}}\\
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#4 - Synchronous Offset and Move Commands}\\
+In enabled/stationary state, send a \emph{move} command of (x=500um,
+y=800um, z=200um, u=0deg, v=0deg, w=0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The hexapod moves to (x=500um, y=800um, z=200um, u=0deg, v=0deg,
+  w=0deg)
+\item
+  Since the Hexapod is in synchronous mode, the actuators complete the
+  move at nearly the same time.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 32 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send an \emph{offset} command of (0um, 0um,
+500um, 0deg, 0deg, 0deg).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The hexapod moves only 500um in Z from the previous position
+\item
+  The actuators complete the move at nearly the same time.
+\item
+  The \emph{MTHexapod\_logevent\_compensationOffset~}starts to publish
+  data to the EFD based on the computed compensation offset and the
+  input parameters provided.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 33 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the corresponding DDS events that were generated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The controllerState.enabledSubstate goes to MOVING\_POINT\_TO\_POINT
+  when the move begins and STATIONARY when the move ends
+\item
+  The \emph{MTHexapod\_logevent\_inPosition} event is True when the move
+  finishes
+\item
+  The \emph{MTHexapod\_logevent\_inPosition} event is False when the
+  enabledSubstate goes back to STATIONARY.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 34 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#2 - setPivot and Move Commands}\\
+In enabled/stationary state, send a \emph{move} command of
+(x=2000um,y=-3500um,z=200um,u=0.01deg,v=-0.05deg, w=0.002deg,sync=true)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:} Determine where the original pivot point is before
+sending a \emph{setPivot} command of (0, 0, 0).\\
+Record any offset commands necessary to test before sending the move
+command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod moves to the commanded position
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 35 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the enabled/stationary state, send the \emph{setPivot} command of
+(0,0,0).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+\begin{itemize}
+\tightlist
+\item
+  The actuator positions do not change but the hexapod position changes
+  to account for the new pivot point.
+\item
+  The\emph{~MTHexapod\_logevent\_configuration} is updated.
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 36 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the enabled/stationary state, send again the \emph{move} command of
+(x=2000um, y=-3500um, z=200um, u=0.01deg, v=-0.05deg,
+w=0.002deg,sync=true)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation}: ~Record any offset commands necessary to test before
+sending the move command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The hexapod doesn't move. Position values in the EFD appear different.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 37 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{{CONFIGURE LIMITS TEST}}\\
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#6 - configureLimits Command}\\
+In enabled/stationary state, send a configureLimits command of (12000um,
+-1000um, 1000um, 0.1, -0.1, 0.05)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:} Skip complete test. This test uses an obsolete
+command. The configuration is now done before and should not be changed
+this state - {The obsolete command was the positionSet command which has
+been changed to move.}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is rejected for being outside acceptable limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 38 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{configureLimits} command of
+(1000um, -1000um, 1000um, 0.1, -0.1, 0.05)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is accepted and \emph{MTHexapod\_logevent\_configuration}
+event is updated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 39 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (850um, 0um,
+500um, 0deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}This command can be any valid \emph{move} command within
+the newly configured limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is accepted and the hexapod moves to the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 40 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (1200um, 0um,
+200um, 0deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Note:~}This command can be any valid \emph{move} command within
+the newly configured limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is rejected for being outside of range limits
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 41 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (990um,
+990um, 200um, 0deg, 0deg, 0deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is rejected for being outside of range limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 42 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (500um,
+500um, 200um, 0deg, 0.1 deg, 0.01deg)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is accepted and moves to the commanded position.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 43 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the DDS events that were generated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The change is reflected in the \emph{MTHexapod\_logevent\_configuration}
+event and the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 44 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+{\textbf{CONFIGURE ACCELERATION TEST}}\\
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#7 - configureAcceleration Command}\\
+In enabled/stationary state, at a position of (0, 0, 0, 0, 0, 0) with
+the velocity and acceleration values set to their nominal values, send a
+\emph{move} command of (0um, 0um, 4900um, 0 deg, 0 deg, 0 deg, s).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:} Skip complete test. This test uses an obsolete
+command. The configuration is now done before and should not be changed
+this state - {the configureAcceleration command is still valid but only
+through the CSC}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The move takes approximately 9 seconds to complete.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 45 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a \emph{configureAcceleration} command of 1000.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+~Confirm command is rejected for being outside of acceptable limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 46 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a \emph{configureAcceleration} command of 100.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is accepted.~
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 47 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (0um, 0um,
+0um, 0 deg, 0 deg, 0 deg, s).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+It takes approximately 13 seconds to complete the commanded move with
+the reduced acceleration value.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 48 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a \emph{configureAcceleration} command of 500 to return the
+acceleration limit to its nominal value.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The command is accepted.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 49 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the corresponding DDS events that were generated.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The change is reflected in the \emph{MTHexapod\_logevent\_configuration}
+event and the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 50 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{{CONFIGURE VELOCITY TEST}}\\
+\textbf{Section 3.1.2 of the attached Software Acceptance Test
+Procedure\\
+Test Sequence \#8 - configureVelocity Command}\\
+In enabled/stationary state, at a position of (0, 0, 0, 0, 0, 0), send a
+\emph{configureVelocity} command of (10000, .01, 100, .01).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+\textbf{Deviation:} Skip complete test. This test uses an obsolete
+command. The configuration is now done before and should not be changed
+- {this state the configureVelocity command is still valid but only
+through the CSC}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+This command is rejected for being outside of acceptable limits.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 51 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{configureVelocity} command of
+(100, .01, 200, .01).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+This command is accepted.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 52 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{move} command of (0, 0um,
+2000um, 0 deg, 0 deg, 0 deg, s).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+It takes approximately 20 seconds to complete the commanded move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 53 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send a \emph{configureVelocity} command of
+(100, .01, 100, .01).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+This command is accepted.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 54 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In enabled/stationary state, send an \emph{offset} command of (0, 0um,
+2000um, 0 deg, 0 deg, 0 deg).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+This command is accepted
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 55 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Send a \emph{move} command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+It takes approximately 40 seconds to complete the commanded move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 56 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Record the corresponding DDS events that were generated:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The change is reflected in the \emph{MTHexapod\_logevent\_configuration}
+event and the EUI.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 57 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 3.3.2 of the attached Software Acceptance Test Procedure
+Hexapod Action on State Commands}\\
+The state machine is a standbyState entry state machine.\\
+Transition the state machine into offlineState/publishOnly state.\\
+In the offlineState/publishOnly state, send all commands
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+{Note: This section utilizes the commands defined in LSE-209}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There is no change and command is rejected.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 58 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Transition the state machine into offlineState/Available state.\\
+In the offlineState/Available state, send an enterControl command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system enters the standbyState.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 59 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the \textbf{standbyState,} send any command except start or
+exitControl
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There is no change and command is rejected.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 60 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Standby state, send an exitControl command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the Offline/Available state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 61 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Transition the state machine into standbyState.\\
+In the Standby state, send a start command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the disabledState.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 62 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Disabled state, send any command except for the enabled or
+standby command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There is no change and the command is rejected.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 63 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Disabled state, send the standby command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the Standby state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 64 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Transition the state machine into disabledstate\\
+In the Disabled state, send the enable command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into the Enabled/Stationary state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 65 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Enabled/Stationary state, send either the enterControl command,
+exitControl command, start command, clearError command, or enable
+command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+There is no change and command is rejected.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 66 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Enabled/Stationary state, send a disable command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The system transitions into Disabled state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 67 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Fault state, send any command.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+The state machine transitions into the commanded state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 68 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+\textbf{Section 4 of the attached Software Acceptance Test Procedure}\\
+In the Enabled/Stationary state, unplug a motor encoder cable for one of
+the actuators.\textbf{}\\
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Test Data \\
+ {\footnotesize
+
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 69 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+In the Enabled/Stationary state, unplug a linear encoder cable for one
+of the actuators.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Drive Fault error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 70 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Unplug a motor power cable from one of the actuators and command a Move.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Following Error event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 71 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Activate an extension limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+An Extended Limit Switch error event is created and the system
+transitions into Fault state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 72 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Activate a retraction limit switch on one of the actuators by removing
+the limit switch cover and manually tripping.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A Retracted Limit Switch error event is created and the system
+transitions into Fault state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 73 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Unplug the Ethercat cable between the control PC and the first Copley
+XE2 drive.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+An Ethercat Lost event is created and the system transitions to Fault
+state.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
 
 
 
